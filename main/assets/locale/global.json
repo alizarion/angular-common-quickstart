@@ -1,0 +1,19 @@
+{
+  "GLOBAL" : {
+    "MENU_ITEM_PLAYLIST" : "Listes de lecture",
+    "MENU_ITEM_MUSIC" : "Genres musicaux",
+    "MENU_ITEM_MUSIC_POPROCK" : "Pop Rock",
+    "MENU_ITEM_MUSIC_DANCE" : "Dance",
+    "ENGLISH_MENUITEM" : "Englais",
+    "FRENCH_MENUITEM" : "Français",
+    "GERMAN_MENUITEM" : "Allemand",
+    "LOGOUT_MENUITEM" : "Déconnexion",
+    "LOGIN" : {
+      "USER_LABEL" : "Nom d'utilisateur",
+      "PASSWORD_LABEL" : "Mot de passe",
+      "SUBMIT_BUTTON_LABEL" : "Connexion"
+    },
+    "ARTIST_LABEL" : "Artiste",
+    "TITLE_LABEL" : "Titre"
+  }
+}

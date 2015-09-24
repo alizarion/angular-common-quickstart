@@ -1,0 +1,5 @@
+{
+	"directory": "main/assets/lib",
+	"proxy":"http://10.1.100.150:3128",
+	"https-proxy":"http://10.1.100.150:3128"
+}

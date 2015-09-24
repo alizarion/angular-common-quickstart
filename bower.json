@@ -1,0 +1,19 @@
+{
+  "name": "webapp_seed",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-common": "https://github.com/alizarion/angular-common/archive/v1.0-beta.3.zip",
+    "angular-translate-loader-partial": "~2.8.0",
+    "angular-translate-loader-static-files": "~2.8.0",
+    "components-font-awesome": "~4.4.0"
+  }
+}

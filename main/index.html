@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="en" ng-app="seed" ng-strict-di>
+    <head>
+        <meta charset="utf-8">
+        <title>ITESOFT.MusicManager</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Favorite Icon -->
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="assets/lib/angular-common/docs/css/dist/assets/fonts/main.min.css">
+        <link rel="stylesheet" href="assets/lib/components-font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+
+        <!-- Lib Scripts Dependencies-->
+        <script type='text/javascript' src="assets/lib/angular-common/dist/assets/lib/vendor.min.js"></script>
+        <script type='text/javascript' src="assets/lib/angular-common/dist/app/itesoft.min.js"></script>
+        <script type='text/javascript' src="assets/lib/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
+        <script type='text/javascript' src="assets/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+
+        <!-- Core Scripts -->
+        <script type='text/javascript' src="app/app.module.js"></script>
+        <script type='text/javascript' src="app/app.route.js"></script>
+        <script type='text/javascript' src="app/common/services/translationService.js"></script>
+        <script type='text/javascript' src="app/common/services/authService.js"></script>
+        <script type='text/javascript' src="app/common/controllers/mainController.js"></script>
+
+        <!-- Feature Scripts -->
+        <script type='text/javascript' src="app/features/music/poprock/poprockController.js"></script>
+        <script type='text/javascript' src="app/features/music/dance/danceController.js"></script>
+        <script type='text/javascript' src="app/features/playlist/playlistController.js"></script>
+    </head>
+    <body>
+        <div class="full-height" ng-include="'app/app.template.html'"></div>
+    </body>
+</html>
