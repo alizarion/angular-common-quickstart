@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('MusicManager')
-    .service('AuthService',
-    ['$rootScope', function($rootScope) {
+    .factory('AuthService',  ['$rootScope', function ($rootScope) {
+
         $rootScope.user = null;
 
         return {
@@ -16,4 +16,5 @@ angular.module('MusicManager')
                 return $rootScope.user;
             }
         };
+
     }]);
