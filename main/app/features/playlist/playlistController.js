@@ -1,54 +1,49 @@
 'use strict';
 
-angular.module('seed')
+angular.module('MusicManager')
     .controller('PlaylistController', ['$scope', '$translate', function ($scope, $translate) {
 
         $scope.data = [
             {
-                "artist": "Major Lazer & DJ Snake",
-                "title": "Lean On",
-                "ilike": false
+                "name": "Liste 1",
+                "description": "Ma liste 1",
+                "shared": false
             },
             {
-                "artist": "Calvin Harris",
-                "title": "Outside ft. Ellie Gouldind",
-                "ilike": true
+                "name": "Liste 2",
+                "description": "Ma liste 2",
+                "shared": true
             },
             {
-                "artist": "Skrillex and Diplo",
-                "title": "Where are you now",
-                "ilike": false
+                "name": "Liste 3",
+                "description": "Ma liste 3",
+                "shared": true
             },
             {
-                "artist": "Avicii",
-                "title": "Waiting for love",
-                "ilike": true
+                "name": "Liste 4",
+                "description": "Ma liste 4",
+                "shared": false
             },
             {
-                "artist": "Calvin Harris & Disciples",
-                "title": "How Deep Is Your Love",
-                "ilike": true
-            },
-            {
-                "artist": "OMI (Felix Jaehn Remix)",
-                "title": "Cheerleader",
-                "ilike": true
+                "name": "Liste 5",
+                "description": "Ma liste 5",
+                "shared": false
             }
         ];
 
         $scope.masterDetails = {};
 
         $scope.masterDetails = {
-            columnDefs : [{ field: "artist", displayName: $translate.instant("GLOBAL.ARTIST_LABEL"),  sortable:true},
-                { field: "title", displayName: $translate.instant("GLOBAL.TITLE_LABEL"),  sortable:true},
-                { field: "ilike", displayName: $translate.instant("PLAYLIST.ILIKE_LABEL"),   sortable:false}]
+            columnDefs : [{ field: "name", displayName: $translate.instant("PLAYLIST.NAME_LABEL"),  sortable:true},
+                { field: "description", displayName: $translate.instant("PLAYLIST.DESCRIPTION_LABEL"),  sortable:true},
+                { field: "shared", displayName: $translate.instant("PLAYLIST.SHARED_LABEL"),   sortable:false}]
 
         };
 
         $scope.masterDetails.disableMultiSelect = false;
         $scope.masterDetails.navAlert = {
-            text:'Vous n\'avez pas sauvegardé vos modifications',
-            title:'Modification en cours'
+            title: $translate.instant("PLAYLIST.MODIFICATION_POPUP.TITLE"),
+            text: $translate.instant("PLAYLIST.MODIFICATION_POPUP.MESSAGE")
         };
 
         function _removeItems(items,dataList){
@@ -61,7 +56,6 @@ angular.module('seed')
         $scope.deleteSelectedItems = function(){
             _removeItems($scope.masterDetails.getSelectedItems(), $scope.data);
         };
-
 
         $scope.saveCurrentItem = function(){
             angular.copy( $scope.masterDetails.getCurrentItemWrapper().currentItem,$scope.data[$scope.masterDetails.getCurrentItemWrapper().index])
@@ -76,9 +70,9 @@ angular.module('seed')
 
         $scope.addNewItem = function(){
             var newItem =  {
-                "artist" : "Artist " + ($scope.data.length+1) ,
-                "title": "Title " + ($scope.data.length+1),
-                "ilike" : true
+                "name" : "Liste " + ($scope.data.length+1) ,
+                "description": "Ma liste " + ($scope.data.length+1),
+                "shared" : true
             };
             $scope.data.push(newItem);
             $scope.masterDetails.setCurrentItem(newItem).then(function(success){

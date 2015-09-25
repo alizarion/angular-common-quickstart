@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('seed')
+angular.module('MusicManager')
     .controller('PoprockController', [
         '$scope',
         function ($scope) {

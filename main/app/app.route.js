@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('seed').config(['$routeProvider',
+angular.module('MusicManager').config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider
             .when('/music/poprock', {

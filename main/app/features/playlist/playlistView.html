@@ -24,22 +24,25 @@
                 </it-detail-header>
                 <it-detail-content>
                     <div class="form-group">
-                        <input it-input type="text" class="form-control floating-label" id="priorityDescription"
-                               it-text="{{'GLOBAL.ARTIST_LABEL' | translate}}"
-                               ng-model="currentItemWrapper.currentItem.artist"
+                        <input it-input type="text" class="form-control floating-label"
+                               id="playlistName"
+                               it-text="{{'PLAYLIST.NAME_LABEL' | translate}}"
+                               ng-model="currentItemWrapper.currentItem.name"
                                name=""
                                ng-required="true"/>
                     </div>
                     <div class="form-group">
-                        <input it-input type="text" class="form-control floating-label" id="priorityCategory"
-                               it-text="{{'GLOBAL.TITLE_LABEL' | translate}}"
-                               ng-model="currentItemWrapper.currentItem.title" name=""/>
+                        <input it-input type="text" class="form-control floating-label"
+                               id="playlistDescription"
+                               it-text="{{'PLAYLIST.DESCRIPTION_LABEL' | translate}}"
+                               ng-model="currentItemWrapper.currentItem.description"
+                               name=""/>
                     </div>
                     <div class="form-group">
                         <input type="checkbox"
                                it-toggle
-                               ng-model="currentItemWrapper.currentItem.ilike"
-                               it-text="{{'PLAYLIST.ILIKE_LABEL' | translate}}"/>
+                               ng-model="currentItemWrapper.currentItem.shared"
+                               it-text="{{'PLAYLIST.SHARED_LABEL' | translate}}"/>
                     </div>
                 </it-detail-content>
             </it-detail>
