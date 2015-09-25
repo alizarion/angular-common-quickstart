@@ -18,6 +18,7 @@ var flatten = require('gulp-flatten');
 var buildConfig = require('./build.config.js');
 var sh = require('shelljs');
 var dedupe = require('gulp-dedupe');
+var serve = require('gulp-serve');
 
 /**
  * Execute les actions de build dans l'ordre
@@ -164,6 +165,8 @@ gulp.task('angular-locales', function() {
 gulp.src(buildConfig.localeJsFiles)
     .pipe(gulp.dest('./dist/assets/lib/angular-i18n'));
 });
+
+gulp.task('serve', serve('main'));
 
 /**
  * Obsérve les modification des scss et compile en css
