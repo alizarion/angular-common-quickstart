@@ -1,3 +1,29 @@
+
+#Build & Run
+##Prérequis
+
+git avec prise en charge du prompt sous windows.
+
+npm. testé et validé avec la version [0.12.2 de nodejs](https://nodejs.org/dist/v0.12.2/).
+
+installer bower et gulp en globale :
+
+        npm install bower -g
+        npm install gulp -g
+        
+##Build
+
+        npm install 
+        bower install
+        gulp build
+
+##Run
+        gulp serve
+        
+démarre un serveur http sur le [port 3000](http://localhost:3000/).
+
+
+
 ## Directory structure
 
 Since a large AngularJS application has many components it's best to structure it in a directory hierarchy.
