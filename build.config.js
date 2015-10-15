@@ -50,6 +50,6 @@ module.exports = {
     ],
     vendorCssFiles: [
         'main/assets/lib/font-awesome/css/font-awesome.min.css',
-        'main/assets/lib/angular-common/dist/assets/fonts/main.min.css'
+        'main/assets/lib/angular-common/dist/assets/fonts/itesoft-bundle.min.css'
     ]
 };
