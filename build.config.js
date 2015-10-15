@@ -44,9 +44,9 @@ module.exports = {
      *
      */
     localeJsFiles: [
-        //'main/assets/lib/angular-i18n/angular-locale_fr.js',
-        //'main/assets/lib/angular-i18n/angular-locale_en.js',
-        //'main/assets/lib/angular-i18n/angular-locale_de.js'
+        'main/assets/lib/angular-i18n/angular-locale_fr.js',
+        'main/assets/lib/angular-i18n/angular-locale_en.js',
+        'main/assets/lib/angular-i18n/angular-locale_de.js'
     ],
     vendorCssFiles: [
         'main/assets/lib/font-awesome/css/font-awesome.min.css',

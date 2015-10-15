@@ -19,6 +19,7 @@ var buildConfig = require('./build.config.js');
 var sh = require('shelljs');
 var dedupe = require('gulp-dedupe');
 var serve = require('gulp-serve');
+var karma = require('gulp-karma');
 
 /**
  * Execute les actions de build dans l'ordre
@@ -280,6 +281,30 @@ gulp.task('build-trad-en', function(callback){
 });
 
 /**
+ * Test unitaire jasmine
+ */
+gulp.task('test', function() {
+
+    /**Ajout des fihcier de test **/
+    var allVendorFiles = buildConfig.vendorJavascriptFiles.slice();
+    allVendorFiles.push('./main/assets/lib/angular-mocks/angular-mocks.js');
+    var allAppFiles = buildConfig.appFiles.slice();
+    allAppFiles = _removeValueFromArray(allAppFiles,'!main/app/**/*Test.js');
+    var testFiles = allVendorFiles.concat(allAppFiles);
+
+    return gulp.src(testFiles)
+        .pipe(karma({
+            configFile: 'karma.conf.js',
+            action: 'run'
+        }))
+        .on('error', function(err) {
+            console.log(err);
+            this.emit('end');
+        });
+});
+
+
+/**
  * Génération des trads fr + en
  */
 gulp.task('build-trad', function(callback){
@@ -287,3 +312,21 @@ gulp.task('build-trad', function(callback){
             'build-trad-en',
             callback);
 });
+
+
+/**
+ * Simple function to remove item from array by value.
+ * @param array
+ * @returns array without removed items.
+ * @private
+ */
+function _removeValueFromArray(arr) {
+    var what, a = arguments, L = a.length, ax;
+    while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax= arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1);
+        }
+    }
+    return arr;
+}
