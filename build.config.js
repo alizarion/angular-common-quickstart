@@ -18,6 +18,9 @@ module.exports = {
 
     closureStart: '(function() {var RELEASE_VERSION="1.0.0";\n',
     closureEnd: '\n})();',
+    
+    distFolder:'dist',
+    srcFolder:'main',
 
     /**
      * Liste des fichiers JS de l'application qui seront minifier pour la prod.
