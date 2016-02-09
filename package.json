@@ -1,8 +1,9 @@
 {
-    "name": "webapp_seed",
-    "version": "2.6.1",
-    "description": "Itesoft WebApp Seed Packaging",
-   "dependencies": {
+  "name": "showcase-quickstart",
+  "description": "Manipulation of documents",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
     "bower": "1.6.5",
     "gulp": "3.9.0",
     "gulp-bower": "0.0.11",
