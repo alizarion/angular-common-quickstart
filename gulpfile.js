@@ -374,12 +374,12 @@ gulp.task('serverhttp',function(){
  * Execute l'action de test e2e
  */
 gulp.task('e2e', ['webdriver_update'], function (callback) {
-    var stream = gulp.src('main')
+    var stream = gulp.src(buildConfig.distFolder)
         .pipe(webserver({
             port: 4000
         }));
     var fileStream = gulp.src('test/e2e/**/*.js');
-    console.log(fileStream);
+
     fileStream.pipe(protractor({
         configFile: "protractor.conf.js",
         args: ['--baseUrl', 'http://127.0.0.1:4000']
