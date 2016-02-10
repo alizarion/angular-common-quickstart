@@ -24,6 +24,7 @@ var karma = require('gulp-karma');
 var protractor = require('gulp-protractor').protractor;
 var webdriver_standalone = require('gulp-protractor').webdriver_standalone;
 var webdriver_update = require('gulp-protractor').webdriver_update;
+var chmod = require('gulp-chmod');
 
 /**
  * Execute les actions de build dans l'ordre
@@ -140,7 +141,24 @@ gulp.task('vendor-js', function () {
  * Concat et Minifie les datas.
  */
 gulp.task('data-js', function () {
-    return gulp.src(buildConfig.appFiles)
+    return gulp.src(buildConfig.appFiles+'/assets/js/')
+        .pipe(chmod({
+			owner: {
+				read: true,
+				write: true,
+				execute: true
+			},
+			group: {
+				read: true,
+				write: true,
+				execute: true
+			},
+			others: {
+				read: true,
+				write: true,
+				execute: true
+			}
+		}))
         .pipe(gulp.dest(buildConfig.distFolder+'/assets/js/'));
 });
 
