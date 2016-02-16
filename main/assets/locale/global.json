@@ -4,10 +4,11 @@
     "MENU_ITEM_MUSIC" : "Genres musicaux",
     "MENU_ITEM_MUSIC_POPROCK" : "Pop Rock",
     "MENU_ITEM_MUSIC_DANCE" : "Dance",
-    "ENGLISH_MENUITEM" : "Englais",
+    "ENGLISH_MENUITEM" : "Anglais",
     "FRENCH_MENUITEM" : "Français",
     "GERMAN_MENUITEM" : "Allemand",
     "LOGOUT_MENUITEM" : "Déconnexion",
+    "YEAR_OF_LABEL" : "Année",
     "LOGIN" : {
       "USER_LABEL" : "Nom d'utilisateur",
       "PASSWORD_LABEL" : "Mot de passe",

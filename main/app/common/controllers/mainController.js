@@ -2,18 +2,38 @@
 
 angular.module('MusicManager')
     .controller('MainController', [
+        '$rootScope',
         '$scope',
         '$translate',
+        '$route',
         'AuthService',
-        function ($scope, $translate, AuthService) {
+        'localStorageService',
+        function ($rootScope, $scope, $translate, $route, AuthService, localStorageService) {
 
-            $scope.currentLanguage = 'fr_FR';
+            //Langues supportées
+            var localeBrowser = {};
+
+            localeBrowser['fr'] = 'fr_FR';
+            localeBrowser['en'] = 'en_US';
+            localeBrowser['de'] = 'de_DE';
+
 
             $scope.authService = AuthService;
 
             $scope.changeLanguage = function (language) {
-                $scope.currentLanguage = language;
-                $translate.use(language);
+
+                //Sauvegarde de la locale
+                localStorageService.set('Locale', language.toString());
+
+                $scope.currentLanguage = language.toString();
+
+                $translate.use($scope.currentLanguage);
+
+                //Reload de la page
+                $route.reload();
+
             };
+
+            $scope.changeLanguage(localeBrowser[$translate.preferredLanguage()]);
 
         }]);
