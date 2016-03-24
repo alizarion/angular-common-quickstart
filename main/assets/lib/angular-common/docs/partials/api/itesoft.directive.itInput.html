@@ -1,0 +1,88 @@
+<h1><code ng:non-bindable="">itInput</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">itesoft</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="itesoft-directive-page itesoft-directive-itinput-page"><p>Floating labels are just like Stacked Labels,
+except that their labels animate, or &quot;float&quot; up whe
+n text is entered in the input.</p>
+<pre><code class="lang-html">  &lt;form class=&quot;form-group&quot;  novalidate name=&quot;myForm&quot; ng-submit=&quot;submit(myForm)&quot;&gt;
+      &lt;input it-input
+             class=&quot;form-control floating-label&quot;
+             type=&quot;text&quot;
+             name=&quot;Email&quot;
+             ng-minlength=&quot;5&quot;
+             ng-maxlength=&quot;10&quot;
+             required=&quot;&quot;
+             it-label=&quot;Email&quot;
+             ng-model=&quot;user.email&quot;&gt;
+             &lt;div class=&quot;form-errors&quot; ng-messages=&quot;myForm.Email.$error&quot; style=&quot;color: red;&quot;&gt;
+           &lt;div class=&quot;form-error&quot; ng-message=&quot;required&quot;&gt;This field is required.&lt;/div&gt;
+           &lt;div class=&quot;form-error&quot; ng-message=&quot;minlength&quot;&gt;This field is must be at least 5 characters.&lt;/div&gt;
+           &lt;div class=&quot;form-error&quot; ng-message=&quot;maxlength&quot;&gt;This field is must be less than 50 characters&lt;/div&gt;
+            &lt;/div&gt;
+  &lt;/form&gt;
+</code></pre>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;it-input&gt;
+&lt;/it-input&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY it-input&gt;
+   ...
+&lt;/ANY&gt;</pre>
+as class<pre class="prettyprint linenums">&lt;ANY class="it-input"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="itesoft-directive-page itesoft-directive-itinput-page"><h4 id="example_source">Source</h4>
+<div source-edit="itesoft-showcase" source-edit-deps="angular.js Module.js controller.js" source-edit-html="index.html-112" source-edit-css="" source-edit-js="Module.js controller.js" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-112" ng-html-wrap-loaded="itesoft-showcase angular.js Module.js controller.js"></pre>
+<script type="text/ng-template" id="index.html-112">
+    <div ng-controller="HomeCtrl">
+       <form class="form-group"  novalidate name="myForm" ng-submit="submit(myForm)">
+        <div class="form-group">
+                <input it-input class="form-control floating-label" type="text" it-label="Email" ng-model="user.email">
+        </div>
+        <div class="form-group">
+                <input it-input class="form-control floating-label"   required="" ng-minlength="5"  ng-maxlength="10" type="text" it-label="Prénom" name="Prenom" ng-model="user.firstName">
+        </div>
+          <div class="form-errors" ng-messages="myForm.Prenom.$error" style="color: red;">
+              <div class="form-error" ng-message="required">This field is required.</div>
+              <div class="form-error" ng-message="minlength">This field is must be at least 5 characters.</div>
+              <div class="form-error" ng-message="maxlength">This field is must be less than 50 characters</div>
+          </div>
+          <button class="btn btn-primary" type="submit">submit</button>
+       </form>
+    </div>
+</script>
+</div>
+<div class="tab-pane" title="Module.js">
+<pre class="prettyprint linenums" ng-set-text="Module.js"></pre>
+<script type="text/ng-template" id="Module.js">
+ angular.module('itesoft-showcase',['ngMessages','itesoft']);
+ </script>
+</div>
+<div class="tab-pane" title="controller.js">
+<pre class="prettyprint linenums" ng-set-text="controller.js"></pre>
+<script type="text/ng-template" id="controller.js">
+    angular.module('itesoft-showcase').controller('HomeCtrl',['$scope', function($scope) {
+          $scope.user = {
+              email : 'test@itesoft.com',
+              firstName :''
+             };
+
+          $scope.submit = function(form){
+               if(form.$valid){
+                 console.log('submit');
+               }
+          }
+    }]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="itesoft-showcase" ng-set-html="index.html-112" ng-eval-javascript="Module.js controller.js"></div>
+</div></div>
+</div>

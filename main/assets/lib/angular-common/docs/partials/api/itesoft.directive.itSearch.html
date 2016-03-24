@@ -1,0 +1,205 @@
+<h1><code ng:non-bindable="">itSearch</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">itesoft</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="itesoft-directive-page itesoft-directive-itsearch-page"><p>Attribute providing on an input a single filter box that searches across multiple columns in a grid (ui-grid) or a table.</p>
+<p>You MUST pass an object <code>&lt;input it-search it-search-control=&quot;searchControl&quot; ng-model=&quot;searchControl.filterText&quot; &gt;&lt;/input&gt;</code>.
+This object will be used as following:</p>
+<p><table class="table">
+ <tr>
+  <td><code>searchControl = { <br/> columnDefs : [{field:&#39;field1&#39;}, {field:&#39;field2&#39;}, {field:&#39;field3&#39;}]  <br/>}</code></td>
+  <td>Object passed to the multicolumns function filter inside the component to let it know on which columns to apply the filter.
+  <br>This object is based on the columnDefs defined for the UI-GRID. Only property field and cellFilter are used.
+  </td>
+ </tr>
+ <tr>
+  <td><code>searchControl.multicolumnsFilter(renderableRows)</code></td>
+  <td>Method to filter in the grid or table according the choosen column fields.<br/>It returns the new rows to be displayed.</td>
+ </tr>
+ <tr>
+  <td><code>searchControl.filterText</code></td>
+  <td>This property of the scope has to be associated to the input<br/>(through ng-model).</td>
+ </tr>
+</table>
+You MUST also pass a function <code>&lt;input it-search ng-change=&quot;filter()&quot;&gt;&lt;/input&gt;</code>.
+This function should call searchControl.multicolumnsFilter() to refresh the displayed data and has to be written in the application controller.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">&lt;input it-search it-search-control="searchControl" ng-model="searchControl.filterText" ng-change="filter()"&gt;
+&lt;/input&gt;</pre>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="itesoft-directive-page itesoft-directive-itsearch-page"><p><span><b>SEARCH IN UI-GRID</b></span>
+<h4 id="example_source">Source</h4>
+<div source-edit="itesoft-showcase" source-edit-deps="angular.js Module.js LatinService.js Controller.js" source-edit-html="index.html-113" source-edit-css="" source-edit-js="Module.js LatinService.js Controller.js" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-113" ng-html-wrap-loaded="itesoft-showcase angular.js Module.js LatinService.js Controller.js"></pre>
+<script type="text/ng-template" id="index.html-113">
+<div ng-controller="SearchDemoControllerGrid">
+<div class="container-fluid">
+<div class="jumbotron">
+<div class="row">
+<button class="btn btn-primary" ng-click="loadDataGrid()">DISPLAY DATA IN UI-GRID</button>
+<form>
+<div class="form-group has-feedback" >
+<input it-search class="form-control" type="text" placeholder="Recherche multicolonnes dans UI-GRID" it-search-control="searchControl" ng-model="searchControl.filterText" ng-change="filter()"/>
+</div>
+</form>
+<div ui-grid="latinGrid" id="latinGrid"></div>
+</div>
+</div>
+</div>
+</div>
+</script>
+</div>
+<div class="tab-pane" title="Module.js">
+<pre class="prettyprint linenums" ng-set-text="Module.js"></pre>
+<script type="text/ng-template" id="Module.js">
+angular.module('itesoft-showcase',['ngResource','itesoft']);
+</script>
+</div>
+<div class="tab-pane" title="LatinService.js">
+<pre class="prettyprint linenums" ng-set-text="LatinService.js"></pre>
+<script type="text/ng-template" id="LatinService.js">
+angular.module('itesoft-showcase')
+.factory('Latin',['$resource', function($resource){
+                                                   return $resource('http://jsonplaceholder.typicode.com/posts');
+                                               }]);
+</script>
+</div>
+<div class="tab-pane" title="Controller.js">
+<pre class="prettyprint linenums" ng-set-text="Controller.js"></pre>
+<script type="text/ng-template" id="Controller.js">
+angular.module('itesoft-showcase')
+.controller('SearchDemoControllerGrid',['$scope','Latin', function($scope,Latin) {
+                           $scope.searchControl = {
+                               columnDefs : [{field:'title'}, {field:'body'}]
+                           };
+
+                           $scope.dataSource = [];
+
+                           //---------------ONLY UI-GRID--------------------
+                           $scope.myDefs = [
+                                   {
+                                       field: 'id',
+                                       width: 50
+                                   },
+                                   {
+                                       field: 'title'
+                                   },
+                                   {
+                                       field: 'body'
+                                   }
+                           ];
+                           $scope.latinGrid = {
+                               data: 'dataSource',
+                               columnDefs: $scope.myDefs,
+                               onRegisterApi: function (gridApi) {
+                                   $scope.gridApi = gridApi;
+                                   $scope.gridApi.grid.registerRowsProcessor($scope.searchControl.multicolumnsFilter, 200);
+                               }
+                           };
+                           //---------------ONLY UI-GRID--------------------
+
+                           $scope.filter = function () {
+                               $scope.gridApi.grid.refresh();
+                           };
+
+                           $scope.loadDataGrid = function() {
+                               $scope.dataSource = [];
+
+                               Latin.query().$promise
+                               .then(function(data){
+                                   $scope.dataSource = data;
+                               });
+                           };
+                    }]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="itesoft-showcase" ng-set-html="index.html-113" ng-eval-javascript="Module.js LatinService.js Controller.js"></div>
+<p><span><b>SEARCH IN TABLE</b></span>
+<h4 id="example_source">Source</h4>
+<div source-edit="itesoft-showcase1" source-edit-deps="angular.js Module1.js LatinService1.js Controller1.js" source-edit-html="index.html-114" source-edit-css="" source-edit-js="Module1.js LatinService1.js Controller1.js" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-114" ng-html-wrap-loaded="itesoft-showcase1 angular.js Module1.js LatinService1.js Controller1.js"></pre>
+<script type="text/ng-template" id="index.html-114">
+<div ng-controller="SearchDemoControllerTable">
+<div class="container-fluid">
+<div class="jumbotron">
+<div class="row">
+<button class="btn btn-primary" ng-click="loadDataTable()">DISPLAY DATA IN TABLE</button>
+<form>
+<div class="form-group has-feedback" >
+<input it-search class="form-control" type="text" placeholder="Recherche multicolonnes dans TABLE" it-search-control="searchControl" ng-model="searchControl.filterText" ng-change="filter()"/>
+</div>
+</form>
+<table class="table table-striped table-hover ">
+<thead>
+<tr><th>id</th><th>title</th><th>body</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="dataItem in data">
+<td>{{dataItem.id}}</td>
+<td>{{dataItem.title}}</td>
+<td>{{dataItem.body}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</script>
+</div>
+<div class="tab-pane" title="Module1.js">
+<pre class="prettyprint linenums" ng-set-text="Module1.js"></pre>
+<script type="text/ng-template" id="Module1.js">
+angular.module('itesoft-showcase1',['ngResource','itesoft']);
+</script>
+</div>
+<div class="tab-pane" title="LatinService1.js">
+<pre class="prettyprint linenums" ng-set-text="LatinService1.js"></pre>
+<script type="text/ng-template" id="LatinService1.js">
+angular.module('itesoft-showcase1')
+.factory('Latin1',['$resource', function($resource){
+                                           return $resource('http://jsonplaceholder.typicode.com/posts');
+                                       }]);
+</script>
+</div>
+<div class="tab-pane" title="Controller1.js">
+<pre class="prettyprint linenums" ng-set-text="Controller1.js"></pre>
+<script type="text/ng-template" id="Controller1.js">
+angular.module('itesoft-showcase1')
+.controller('SearchDemoControllerTable',['$scope','Latin1', function($scope,Latin1) {
+                   $scope.searchControl = {};
+                   $scope.searchControl = {
+                       columnDefs : [{field:'title'}, {field:'body'}]
+                   };
+
+                   $scope.dataSource = [];
+                   $scope.data = [];
+
+                   $scope.filter = function () {
+                       $scope.data = $scope.searchControl.multicolumnsFilter($scope.dataSource);
+                   };
+
+                   $scope.loadDataTable = function() {
+                       $scope.dataSource = [];
+                       $scope.data = [];
+
+                       Latin1.query().$promise
+                       .then(function(data){
+                          $scope.dataSource = data;
+                          $scope.data = data;
+                       });
+                   };
+            }]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="itesoft-showcase1" ng-set-html="index.html-114" ng-eval-javascript="Module1.js LatinService1.js Controller1.js"></div>
+</div></div>
+</div>

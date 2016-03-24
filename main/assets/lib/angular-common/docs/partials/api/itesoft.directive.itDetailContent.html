@@ -1,0 +1,38 @@
+<h1><code ng:non-bindable="">itDetailContent</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">itesoft</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="itesoft-directive-page itesoft-directive-itdetailcontent-page"><p>A container element for detail part of the master-detail main content.</p>
+<p>To use master details directive, add an <a href="#/api/itesoft.directive:itMasterDetail"><code>&lt;it-master-detail&gt;</code></a> parent element. This will encompass all master details content,
+and have 2 child elements: 1 <a href="#/api/itesoft.directive:itMaster"><code>&lt;it-master&gt;</code></a> for the list selectable content,
+and <a href="#/api/itesoft.directive:itDetail"><code>&lt;it-detail&gt;</code></a> that display the content of the selected item.</p>
+<pre><code class="lang-html">&lt;it-master-detail&gt;
+  &lt;!-- Master Content content --&gt;
+
+  &lt;it-master&gt;
+      &lt;it-master-header&gt;
+      &lt;/it-master-header&gt;
+  &lt;/it-master&gt;
+
+  &lt;!-- menu --&gt;
+  &lt;it-detail&gt;
+       &lt;it-detail-header&gt;
+      &lt;/it-detail-header&gt;
+
+      &lt;it-detail-content&gt;
+      &lt;/it-detail-content&gt;
+  &lt;/it-detail&gt;
+
+&lt;/it-master-detail&gt;
+</code></pre>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;it-detail-content&gt;
+&lt;/it-detail-content&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY it-detail-content&gt;
+   ...
+&lt;/ANY&gt;</pre>
+</div>
+</div>

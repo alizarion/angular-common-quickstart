@@ -1,0 +1,290 @@
+<h1><code ng:non-bindable="">itSidePanel</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">itesoft</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="itesoft-directive-page itesoft-directive-itsidepanel-page"><p>A container element for side panel and its Header, Content and Footer</p>
+<table class="table">
+  <tr>
+     <td>
+         <pre class="prettyprint linenums">
+             &lt;it-side-panel it-col="3"&gt;
+             &lt;/it-side-panel&gt;
+         </pre>
+     </td>
+     <td>number of bootstrap columns of the Site Panel element, if undefined = 4</td>
+ </tr>
+ <tr>
+     <td>
+         <pre class="prettyprint linenums">
+         &lt;it-side-panel it-z-index="700"&gt;
+         &lt;/it-side-panel&gt;
+         </pre>
+     </td>
+     <td>set the  z-index of the Site Panel elements, by default take highest index of the view.</td>
+ </tr>
+ <tr>
+     <td>
+         <pre class="prettyprint linenums">
+             &lt;it-side-panel it-icon-class="fa-star-o"&gt;
+             &lt;/it-side-panel&gt;
+         </pre>
+     </td>
+     <td>set icon class of Site Panel button. Use Font Awesome icons</td>
+ </tr>
+ <tr>
+     <td>
+         <pre class="prettyprint linenums">
+             &lt;it-side-panel it-height-mode="auto | window | full"&gt;
+             &lt;/it-side-panel&gt;
+         </pre>
+     </td>
+     <td>
+         set &quot;Height Mode&quot; of the Side Panel.
+         <ul>
+             <li><b>auto</b> :
+                 <ul>
+                     <li>if height of Side Panel is greater to the window&#39;s : the mode &quot;window&quot; will be applied.</li>
+                     <li>Else the height of Side Panel is equal to its content</li>
+                 </ul>
+               </li>
+             <li><b>window</b> : the height of the side panel is equal to the height of the window </li>
+             <li><b>full</b>
+                  <ul>
+                     <li>If the height of Side Panel is smaller than the window&#39;s, the mode &quot;auto&quot; is applied</li>
+                     <li>Else the height of Side Panel covers the height of its content (header, content and footer) without scroll bar.</li>
+                 </ul>
+             </li>
+         </ul>
+     </td>
+ </tr>
+ <tr>
+     <td>
+         <pre class="prettyprint linenums">
+             &lt;it-side-panel it-top-position="XX | none"&gt;
+             &lt;/it-side-panel&gt;
+         </pre>
+     </td>
+     <td>
+         set css top position of the Side Panel. Default value is &quot;none&quot; mode
+         <ul>
+             <li><b>none</b> :  Will take the default css &quot;top&quot; property of theSide Panel. Default &quot;top&quot; is &quot;0px&quot;. This position can be override by &#39;it-side-panel .it-side-panel-container&#39; css selector</li>
+             <li><b>XX</b> : Has to be a number. It will override the default css top position of Side Panel. <i>Ex : with it-top-position=&quot;40&quot;, the top position of Side Panel will be &quot;40px&quot;</i>
+             </li>
+         </ul>
+     </td>
+ </tr>
+</table>
+
+<pre><code class="lang-html">&lt;it-side-panel&gt;
+     &lt;it-side-panel-header&gt;
+         &lt;!--Header of Side Panel --&gt;
+     &lt;/it-side-panel-header&gt;
+     &lt;it-side-panel-content&gt;
+         &lt;!--Content Side Panel--&gt;
+     &lt;/it-side-panel-content&gt;
+     &lt;it-side-panel-footer&gt;
+         &lt;!--Footer Side Panel--&gt;
+     &lt;/it-side-panel-footer&gt;
+&lt;/it-side-panel&gt;
+</code></pre>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;it-side-panel&gt;
+&lt;/it-side-panel&gt;</pre>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="itesoft-directive-page itesoft-directive-itsidepanel-page"><h4 id="example_source">Source</h4>
+<div source-edit="itesoft" source-edit-deps="angular.js" source-edit-html="index.html-121" source-edit-css="custom.css" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-121" ng-html-wrap-loaded="itesoft angular.js"></pre>
+<script type="text/ng-template" id="index.html-121">
+
+<it-side-panel it-col="6" it-z-index="1100" it-height-mode="window" it-top-position="40"  it-icon-class="fa-star-o">
+<it-side-panel-header>
+<div><h3 id="example_favorites">Favorites</h3></div>
+</it-side-panel-header>
+<it-side-panel-content>
+<div>
+<h4 id="example_favorites_favorite-1">Favorite 1</h4>
+<p>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repudiandae, totam vel dignissimos saepe cum assumenda velit tempora blanditiis harum hic neque et magnam tenetur alias provident tempore cumque facilis.
+</p>
+
+<br>
+<h4 id="example_favorites_favorite-2">Favorite 2</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_favorites_favorite-3">Favorite 3</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_favorites_favorite-4">Favorite 4</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, tenetur, nesciunt molestias illo sapiente ab officia soluta vel ipsam aut laboriosam hic veritatis assumenda alias in enim rem commodi optio?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quisquam autem debitis perspiciatis explicabo! Officiis, eveniet quas illum commodi cum rerum temporibus repellendus ducimus magnam facilis a aliquam eligendi minus.
+</p>
+<br>
+<h4 id="example_favorites_favorite-5">Favorite 5</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_favorites_favorite-6">Favorite 6</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_favorites_favorite-7">Favorite 7</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, tenetur, nesciunt molestias illo sapiente ab officia soluta vel ipsam aut laboriosam hic veritatis assumenda alias in enim rem commodi optio?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quisquam autem debitis perspiciatis explicabo! Officiis, eveniet quas illum commodi cum rerum temporibus repellendus ducimus magnam facilis a aliquam eligendi minus.
+</p>
+<br>
+<h4 id="example_favorites_favorite-8">Favorite 8</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_favorites_favorite-9">Favorite 9</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_favorites_favorite-10">Favorite 10</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, tenetur, nesciunt molestias illo sapiente ab officia soluta vel ipsam aut laboriosam hic veritatis assumenda alias in enim rem commodi optio?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quisquam autem debitis perspiciatis explicabo! Officiis, eveniet quas illum commodi cum rerum temporibus repellendus ducimus magnam facilis a aliquam eligendi minus.
+</p>
+<br>
+<h4 id="example_favorites_favorite-11">Favorite 11</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_favorites_favorite-12">Favorite 12</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_favorites_favorite-13">Favorite 13</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, tenetur, nesciunt molestias illo sapiente ab officia soluta vel ipsam aut laboriosam hic veritatis assumenda alias in enim rem commodi optio?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quisquam autem debitis perspiciatis explicabo! Officiis, eveniet quas illum commodi cum rerum temporibus repellendus ducimus magnam facilis a aliquam eligendi minus.
+</p>
+<br>
+<h4 id="example_favorites_favorite-14">Favorite 14</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_favorites_favorite-15">Favorite 15</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_favorites_favorite-16">Favorite 16</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, tenetur, nesciunt molestias illo sapiente ab officia soluta vel ipsam aut laboriosam hic veritatis assumenda alias in enim rem commodi optio?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quisquam autem debitis perspiciatis explicabo! Officiis, eveniet quas illum commodi cum rerum temporibus repellendus ducimus magnam facilis a aliquam eligendi minus.
+</p>
+
+
+</div>
+</it-side-panel-content>
+<it-side-panel-footer>
+<div><button class="btn btn-default btn-success">Submit</button></div>
+</it-side-panel-footer>
+</it-side-panel>
+
+
+<it-side-panel it-col="8" it-z-index="1200" it-height-mode="auto" it-top-position="none"  it-icon-class="fa-pied-piper-alt">
+<it-side-panel-header>
+<div><h3 id="example_silicon-valley">Silicon Valley</h3></div>
+</it-side-panel-header>
+<it-side-panel-content>
+<div>
+<h4 id="example_silicon-valley_paragraph-1">Paragraph 1</h4>
+<p>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repudiandae, totam vel dignissimos saepe cum assumenda velit tempora blanditiis harum hic neque et magnam tenetur alias provident tempore cumque facilis.
+</p>
+
+<br>
+<h4 id="example_silicon-valley_paragraph-2">Paragraph 2</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_silicon-valley_paragraph-3">Paragraph 3</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+
+</div>
+</it-side-panel-content>
+<it-side-panel-footer>
+<div><button class="btn btn-default btn-success">Submit</button></div>
+</it-side-panel-footer>
+</it-side-panel>
+
+
+
+<it-side-panel it-col="2" it-z-index="1300" it-height-mode="full" it-top-position="80">
+<it-side-panel-header>
+<div><h3 id="example_search">Search</h3></div>
+</it-side-panel-header>
+<it-side-panel-content>
+<div>
+<h4 id="example_search_search-1">Search 1</h4>
+<p>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repudiandae, totam vel dignissimos saepe cum assumenda velit tempora blanditiis harum hic neque et magnam tenetur alias provident tempore cumque facilis.
+</p>
+
+<br>
+<h4 id="example_search_search-2">Search 2</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+<br>
+<h4 id="example_search_search-3">Search 3</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, delectus suscipit laboriosam commodi harum totam quas! Autem, quaerat, neque, unde qui nobis aperiam culpa dignissimos iusto ipsam similique dolorem dolor.</p>
+
+</div>
+</it-side-panel-content>
+<it-side-panel-footer>
+<div><button class="btn btn-default btn-success">Submit</button></div>
+</it-side-panel-footer>
+</it-side-panel>
+
+</script>
+</div>
+<div class="tab-pane" title="custom.css">
+<pre class="prettyprint linenums" ng-set-text="custom.css"></pre>
+<style type="text/css" id="custom.css">
+
+    it-side-panel:nth-of-type(1) .it-side-panel-container .it-side-panel-button  {
+      background-color: blue;
+    }
+
+    it-side-panel:nth-of-type(2) .it-side-panel-container .it-side-panel-button {
+      background-color: green;
+    }
+
+    it-side-panel:nth-of-type(3) .it-side-panel-container .it-side-panel-button {
+      background-color: gray;
+    }
+
+
+    .it-side-panel-container .it-side-panel .it-side-panel-footer {
+       text-align: center;
+       display: table;
+       width: 100%;
+    }
+
+    .it-side-panel-container .it-side-panel .it-side-panel-footer div{
+       display: table-cell;
+       vertical-align:middle;
+    }
+
+    .it-side-panel-container .it-side-panel .it-side-panel-footer .btn {
+       margin:0px;
+    }
+
+</style>
+</div>
+</div><h4 id="example_search_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="itesoft" ng-set-html="index.html-121" ng-eval-javascript=""></div>
+</div></div>
+</div>

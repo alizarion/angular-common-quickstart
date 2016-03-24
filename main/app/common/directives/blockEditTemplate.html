@@ -1,0 +1,13 @@
+<div class="readOnly-block">
+    <div class="inside-block-tags">
+        <div ng-show="!blockEditController.fields.blockBefore" ng-click="blockEditController.fn.createBeforeBlock(blockEditController.block)"
+             class="glyphicon glyphicon-plus add-block-button btn btn-primary"></div>
+        <block-content-edit ng-if="blockEditController.fields.loaded" ng-show="blockEditController.fields.blockBefore" readonly="false" block="blockEditController.fields.blockBefore"></block-content-edit>
+
+        <block-content-edit block="blockEditController.fields.block" readonly="true"></block-content-edit>
+
+        <div ng-show="!blockEditController.fields.blockAfter" ng-click="blockEditController.fn.createAfterBlock(blockEditController.block)"
+             class="glyphicon glyphicon-plus add-block-button btn btn-primary"></div>
+        <block-content-edit ng-if="blockEditController.fields.loaded" ng-show="blockEditController.fields.blockAfter" readonly="false" block="blockEditController.fields.blockAfter"></block-content-edit>
+    </div>
+</div>

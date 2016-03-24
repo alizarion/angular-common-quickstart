@@ -1,0 +1,1123 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'E:\\DevTools\\node.exe',
+1 verbose cli   'E:\\DevTools\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.1
+4 verbose readDependencies loading dependencies from C:\DevTools\Git\angular-common-quickstart\package.json
+5 warn package.json webapp_seed@2.6.1 No repository field.
+6 warn package.json webapp_seed@2.6.1 No license field.
+7 verbose install where, deps [ 'C:\\DevTools\\Git\\angular-common-quickstart',
+7 verbose install   [ 'bower',
+7 verbose install     'gulp',
+7 verbose install     'gulp-clean',
+7 verbose install     'gulp-concat',
+7 verbose install     'gulp-flatten',
+7 verbose install     'gulp-footer',
+7 verbose install     'gulp-gh-pages',
+7 verbose install     'gulp-header',
+7 verbose install     'gulp-if',
+7 verbose install     'gulp-jasmine',
+7 verbose install     'gulp-karma',
+7 verbose install     'gulp-less',
+7 verbose install     'gulp-minify-css',
+7 verbose install     'gulp-dedupe',
+7 verbose install     'gulp-rename',
+7 verbose install     'gulp-sass',
+7 verbose install     'gulp-serve',
+7 verbose install     'gulp-uglify',
+7 verbose install     'gulp-useref',
+7 verbose install     'gulp-util',
+7 verbose install     'jasmine-core',
+7 verbose install     'karma',
+7 verbose install     'karma-jasmine',
+7 verbose install     'karma-phantomjs-launcher',
+7 verbose install     'karma-spec-reporter',
+7 verbose install     'phantomjs',
+7 verbose install     'run-sequence',
+7 verbose install     'shelljs' ] ]
+8 verbose install where, peers [ 'C:\\DevTools\\Git\\angular-common-quickstart', [] ]
+9 verbose installManyTop reading for lifecycle C:\DevTools\Git\angular-common-quickstart\package.json
+10 info preinstall webapp_seed@2.6.1
+11 verbose readDependencies loading dependencies from C:\DevTools\Git\angular-common-quickstart\package.json
+12 silly cache add args [ 'bower@1.6.5', null ]
+13 verbose cache add spec bower@1.6.5
+14 silly cache add args [ 'gulp@3.9.0', null ]
+15 verbose cache add spec gulp@3.9.0
+16 silly cache add parsed spec Result {
+16 silly cache add   raw: 'bower@1.6.5',
+16 silly cache add   scope: null,
+16 silly cache add   name: 'bower',
+16 silly cache add   rawSpec: '1.6.5',
+16 silly cache add   spec: '1.6.5',
+16 silly cache add   type: 'version' }
+17 silly addNamed bower@1.6.5
+18 verbose addNamed "1.6.5" is a plain semver version for bower
+19 silly mapToRegistry name bower
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/bower
+23 verbose addNameVersion registry:https://registry.npmjs.org/bower not in flight; fetching
+24 silly cache add parsed spec Result {
+24 silly cache add   raw: 'gulp@3.9.0',
+24 silly cache add   scope: null,
+24 silly cache add   name: 'gulp',
+24 silly cache add   rawSpec: '3.9.0',
+24 silly cache add   spec: '3.9.0',
+24 silly cache add   type: 'version' }
+25 silly addNamed gulp@3.9.0
+26 verbose addNamed "3.9.0" is a plain semver version for gulp
+27 silly mapToRegistry name gulp
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry uri https://registry.npmjs.org/gulp
+31 verbose addNameVersion registry:https://registry.npmjs.org/gulp not in flight; fetching
+32 silly cache add args [ 'gulp-clean@0.3.1', null ]
+33 verbose cache add spec gulp-clean@0.3.1
+34 silly cache add parsed spec Result {
+34 silly cache add   raw: 'gulp-clean@0.3.1',
+34 silly cache add   scope: null,
+34 silly cache add   name: 'gulp-clean',
+34 silly cache add   rawSpec: '0.3.1',
+34 silly cache add   spec: '0.3.1',
+34 silly cache add   type: 'version' }
+35 silly addNamed gulp-clean@0.3.1
+36 verbose addNamed "0.3.1" is a plain semver version for gulp-clean
+37 silly mapToRegistry name gulp-clean
+38 silly mapToRegistry using default registry
+39 silly mapToRegistry registry https://registry.npmjs.org/
+40 silly mapToRegistry uri https://registry.npmjs.org/gulp-clean
+41 verbose addNameVersion registry:https://registry.npmjs.org/gulp-clean not in flight; fetching
+42 silly cache add args [ 'gulp-concat@2.6.0', null ]
+43 verbose cache add spec gulp-concat@2.6.0
+44 silly cache add parsed spec Result {
+44 silly cache add   raw: 'gulp-concat@2.6.0',
+44 silly cache add   scope: null,
+44 silly cache add   name: 'gulp-concat',
+44 silly cache add   rawSpec: '2.6.0',
+44 silly cache add   spec: '2.6.0',
+44 silly cache add   type: 'version' }
+45 silly addNamed gulp-concat@2.6.0
+46 verbose addNamed "2.6.0" is a plain semver version for gulp-concat
+47 silly mapToRegistry name gulp-concat
+48 silly mapToRegistry using default registry
+49 silly mapToRegistry registry https://registry.npmjs.org/
+50 silly mapToRegistry uri https://registry.npmjs.org/gulp-concat
+51 verbose addNameVersion registry:https://registry.npmjs.org/gulp-concat not in flight; fetching
+52 silly cache add args [ 'gulp-flatten@0.2.0', null ]
+53 verbose cache add spec gulp-flatten@0.2.0
+54 silly cache add parsed spec Result {
+54 silly cache add   raw: 'gulp-flatten@0.2.0',
+54 silly cache add   scope: null,
+54 silly cache add   name: 'gulp-flatten',
+54 silly cache add   rawSpec: '0.2.0',
+54 silly cache add   spec: '0.2.0',
+54 silly cache add   type: 'version' }
+55 silly addNamed gulp-flatten@0.2.0
+56 verbose addNamed "0.2.0" is a plain semver version for gulp-flatten
+57 silly mapToRegistry name gulp-flatten
+58 silly mapToRegistry using default registry
+59 silly mapToRegistry registry https://registry.npmjs.org/
+60 silly mapToRegistry uri https://registry.npmjs.org/gulp-flatten
+61 verbose addNameVersion registry:https://registry.npmjs.org/gulp-flatten not in flight; fetching
+62 silly cache add args [ 'gulp-footer@1.0.5', null ]
+63 verbose cache add spec gulp-footer@1.0.5
+64 silly cache add parsed spec Result {
+64 silly cache add   raw: 'gulp-footer@1.0.5',
+64 silly cache add   scope: null,
+64 silly cache add   name: 'gulp-footer',
+64 silly cache add   rawSpec: '1.0.5',
+64 silly cache add   spec: '1.0.5',
+64 silly cache add   type: 'version' }
+65 silly addNamed gulp-footer@1.0.5
+66 verbose addNamed "1.0.5" is a plain semver version for gulp-footer
+67 silly mapToRegistry name gulp-footer
+68 silly mapToRegistry using default registry
+69 silly mapToRegistry registry https://registry.npmjs.org/
+70 silly mapToRegistry uri https://registry.npmjs.org/gulp-footer
+71 verbose addNameVersion registry:https://registry.npmjs.org/gulp-footer not in flight; fetching
+72 silly cache add args [ 'gulp-gh-pages@0.5.4', null ]
+73 verbose cache add spec gulp-gh-pages@0.5.4
+74 silly cache add parsed spec Result {
+74 silly cache add   raw: 'gulp-gh-pages@0.5.4',
+74 silly cache add   scope: null,
+74 silly cache add   name: 'gulp-gh-pages',
+74 silly cache add   rawSpec: '0.5.4',
+74 silly cache add   spec: '0.5.4',
+74 silly cache add   type: 'version' }
+75 silly addNamed gulp-gh-pages@0.5.4
+76 verbose addNamed "0.5.4" is a plain semver version for gulp-gh-pages
+77 silly mapToRegistry name gulp-gh-pages
+78 silly mapToRegistry using default registry
+79 silly mapToRegistry registry https://registry.npmjs.org/
+80 silly mapToRegistry uri https://registry.npmjs.org/gulp-gh-pages
+81 verbose addNameVersion registry:https://registry.npmjs.org/gulp-gh-pages not in flight; fetching
+82 silly cache add args [ 'gulp-header@1.7.1', null ]
+83 verbose cache add spec gulp-header@1.7.1
+84 silly cache add parsed spec Result {
+84 silly cache add   raw: 'gulp-header@1.7.1',
+84 silly cache add   scope: null,
+84 silly cache add   name: 'gulp-header',
+84 silly cache add   rawSpec: '1.7.1',
+84 silly cache add   spec: '1.7.1',
+84 silly cache add   type: 'version' }
+85 silly addNamed gulp-header@1.7.1
+86 verbose addNamed "1.7.1" is a plain semver version for gulp-header
+87 silly mapToRegistry name gulp-header
+88 silly mapToRegistry using default registry
+89 silly mapToRegistry registry https://registry.npmjs.org/
+90 silly mapToRegistry uri https://registry.npmjs.org/gulp-header
+91 verbose addNameVersion registry:https://registry.npmjs.org/gulp-header not in flight; fetching
+92 silly cache add args [ 'gulp-if@2.0.0', null ]
+93 verbose cache add spec gulp-if@2.0.0
+94 silly cache add parsed spec Result {
+94 silly cache add   raw: 'gulp-if@2.0.0',
+94 silly cache add   scope: null,
+94 silly cache add   name: 'gulp-if',
+94 silly cache add   rawSpec: '2.0.0',
+94 silly cache add   spec: '2.0.0',
+94 silly cache add   type: 'version' }
+95 silly addNamed gulp-if@2.0.0
+96 verbose addNamed "2.0.0" is a plain semver version for gulp-if
+97 silly mapToRegistry name gulp-if
+98 silly mapToRegistry using default registry
+99 silly mapToRegistry registry https://registry.npmjs.org/
+100 silly mapToRegistry uri https://registry.npmjs.org/gulp-if
+101 verbose addNameVersion registry:https://registry.npmjs.org/gulp-if not in flight; fetching
+102 silly cache add args [ 'gulp-jasmine@2.2.0', null ]
+103 verbose cache add spec gulp-jasmine@2.2.0
+104 silly cache add parsed spec Result {
+104 silly cache add   raw: 'gulp-jasmine@2.2.0',
+104 silly cache add   scope: null,
+104 silly cache add   name: 'gulp-jasmine',
+104 silly cache add   rawSpec: '2.2.0',
+104 silly cache add   spec: '2.2.0',
+104 silly cache add   type: 'version' }
+105 silly addNamed gulp-jasmine@2.2.0
+106 verbose addNamed "2.2.0" is a plain semver version for gulp-jasmine
+107 silly mapToRegistry name gulp-jasmine
+108 silly mapToRegistry using default registry
+109 silly mapToRegistry registry https://registry.npmjs.org/
+110 silly mapToRegistry uri https://registry.npmjs.org/gulp-jasmine
+111 verbose addNameVersion registry:https://registry.npmjs.org/gulp-jasmine not in flight; fetching
+112 silly cache add args [ 'gulp-karma@0.0.5', null ]
+113 verbose cache add spec gulp-karma@0.0.5
+114 silly cache add parsed spec Result {
+114 silly cache add   raw: 'gulp-karma@0.0.5',
+114 silly cache add   scope: null,
+114 silly cache add   name: 'gulp-karma',
+114 silly cache add   rawSpec: '0.0.5',
+114 silly cache add   spec: '0.0.5',
+114 silly cache add   type: 'version' }
+115 silly addNamed gulp-karma@0.0.5
+116 verbose addNamed "0.0.5" is a plain semver version for gulp-karma
+117 silly mapToRegistry name gulp-karma
+118 silly mapToRegistry using default registry
+119 silly mapToRegistry registry https://registry.npmjs.org/
+120 silly mapToRegistry uri https://registry.npmjs.org/gulp-karma
+121 verbose addNameVersion registry:https://registry.npmjs.org/gulp-karma not in flight; fetching
+122 silly cache add args [ 'gulp-less@3.0.3', null ]
+123 verbose cache add spec gulp-less@3.0.3
+124 silly cache add parsed spec Result {
+124 silly cache add   raw: 'gulp-less@3.0.3',
+124 silly cache add   scope: null,
+124 silly cache add   name: 'gulp-less',
+124 silly cache add   rawSpec: '3.0.3',
+124 silly cache add   spec: '3.0.3',
+124 silly cache add   type: 'version' }
+125 silly addNamed gulp-less@3.0.3
+126 verbose addNamed "3.0.3" is a plain semver version for gulp-less
+127 silly mapToRegistry name gulp-less
+128 silly mapToRegistry using default registry
+129 silly mapToRegistry registry https://registry.npmjs.org/
+130 silly mapToRegistry uri https://registry.npmjs.org/gulp-less
+131 verbose addNameVersion registry:https://registry.npmjs.org/gulp-less not in flight; fetching
+132 silly cache add args [ 'gulp-minify-css@1.2.1', null ]
+133 verbose cache add spec gulp-minify-css@1.2.1
+134 silly cache add parsed spec Result {
+134 silly cache add   raw: 'gulp-minify-css@1.2.1',
+134 silly cache add   scope: null,
+134 silly cache add   name: 'gulp-minify-css',
+134 silly cache add   rawSpec: '1.2.1',
+134 silly cache add   spec: '1.2.1',
+134 silly cache add   type: 'version' }
+135 silly addNamed gulp-minify-css@1.2.1
+136 verbose addNamed "1.2.1" is a plain semver version for gulp-minify-css
+137 silly mapToRegistry name gulp-minify-css
+138 silly mapToRegistry using default registry
+139 silly mapToRegistry registry https://registry.npmjs.org/
+140 silly mapToRegistry uri https://registry.npmjs.org/gulp-minify-css
+141 verbose addNameVersion registry:https://registry.npmjs.org/gulp-minify-css not in flight; fetching
+142 silly cache add args [ 'gulp-dedupe@0.0.2', null ]
+143 verbose cache add spec gulp-dedupe@0.0.2
+144 silly cache add parsed spec Result {
+144 silly cache add   raw: 'gulp-dedupe@0.0.2',
+144 silly cache add   scope: null,
+144 silly cache add   name: 'gulp-dedupe',
+144 silly cache add   rawSpec: '0.0.2',
+144 silly cache add   spec: '0.0.2',
+144 silly cache add   type: 'version' }
+145 silly addNamed gulp-dedupe@0.0.2
+146 verbose addNamed "0.0.2" is a plain semver version for gulp-dedupe
+147 silly mapToRegistry name gulp-dedupe
+148 silly mapToRegistry using default registry
+149 silly mapToRegistry registry https://registry.npmjs.org/
+150 silly mapToRegistry uri https://registry.npmjs.org/gulp-dedupe
+151 verbose addNameVersion registry:https://registry.npmjs.org/gulp-dedupe not in flight; fetching
+152 silly cache add args [ 'gulp-rename@1.2.2', null ]
+153 verbose cache add spec gulp-rename@1.2.2
+154 silly cache add parsed spec Result {
+154 silly cache add   raw: 'gulp-rename@1.2.2',
+154 silly cache add   scope: null,
+154 silly cache add   name: 'gulp-rename',
+154 silly cache add   rawSpec: '1.2.2',
+154 silly cache add   spec: '1.2.2',
+154 silly cache add   type: 'version' }
+155 silly addNamed gulp-rename@1.2.2
+156 verbose addNamed "1.2.2" is a plain semver version for gulp-rename
+157 silly mapToRegistry name gulp-rename
+158 silly mapToRegistry using default registry
+159 silly mapToRegistry registry https://registry.npmjs.org/
+160 silly mapToRegistry uri https://registry.npmjs.org/gulp-rename
+161 verbose addNameVersion registry:https://registry.npmjs.org/gulp-rename not in flight; fetching
+162 silly cache add args [ 'gulp-sass@2.1.0', null ]
+163 verbose cache add spec gulp-sass@2.1.0
+164 silly cache add parsed spec Result {
+164 silly cache add   raw: 'gulp-sass@2.1.0',
+164 silly cache add   scope: null,
+164 silly cache add   name: 'gulp-sass',
+164 silly cache add   rawSpec: '2.1.0',
+164 silly cache add   spec: '2.1.0',
+164 silly cache add   type: 'version' }
+165 silly addNamed gulp-sass@2.1.0
+166 verbose addNamed "2.1.0" is a plain semver version for gulp-sass
+167 silly mapToRegistry name gulp-sass
+168 silly mapToRegistry using default registry
+169 silly mapToRegistry registry https://registry.npmjs.org/
+170 silly mapToRegistry uri https://registry.npmjs.org/gulp-sass
+171 verbose addNameVersion registry:https://registry.npmjs.org/gulp-sass not in flight; fetching
+172 silly cache add args [ 'gulp-serve@0.1.0', null ]
+173 verbose cache add spec gulp-serve@0.1.0
+174 silly cache add parsed spec Result {
+174 silly cache add   raw: 'gulp-serve@0.1.0',
+174 silly cache add   scope: null,
+174 silly cache add   name: 'gulp-serve',
+174 silly cache add   rawSpec: '0.1.0',
+174 silly cache add   spec: '0.1.0',
+174 silly cache add   type: 'version' }
+175 silly addNamed gulp-serve@0.1.0
+176 verbose addNamed "0.1.0" is a plain semver version for gulp-serve
+177 silly mapToRegistry name gulp-serve
+178 silly mapToRegistry using default registry
+179 silly mapToRegistry registry https://registry.npmjs.org/
+180 silly mapToRegistry uri https://registry.npmjs.org/gulp-serve
+181 verbose addNameVersion registry:https://registry.npmjs.org/gulp-serve not in flight; fetching
+182 silly cache add args [ 'gulp-uglify@1.4.2', null ]
+183 verbose cache add spec gulp-uglify@1.4.2
+184 silly cache add parsed spec Result {
+184 silly cache add   raw: 'gulp-uglify@1.4.2',
+184 silly cache add   scope: null,
+184 silly cache add   name: 'gulp-uglify',
+184 silly cache add   rawSpec: '1.4.2',
+184 silly cache add   spec: '1.4.2',
+184 silly cache add   type: 'version' }
+185 silly addNamed gulp-uglify@1.4.2
+186 verbose addNamed "1.4.2" is a plain semver version for gulp-uglify
+187 silly mapToRegistry name gulp-uglify
+188 silly mapToRegistry using default registry
+189 silly mapToRegistry registry https://registry.npmjs.org/
+190 silly mapToRegistry uri https://registry.npmjs.org/gulp-uglify
+191 verbose addNameVersion registry:https://registry.npmjs.org/gulp-uglify not in flight; fetching
+192 silly cache add args [ 'gulp-useref@2.0.1', null ]
+193 verbose cache add spec gulp-useref@2.0.1
+194 silly cache add parsed spec Result {
+194 silly cache add   raw: 'gulp-useref@2.0.1',
+194 silly cache add   scope: null,
+194 silly cache add   name: 'gulp-useref',
+194 silly cache add   rawSpec: '2.0.1',
+194 silly cache add   spec: '2.0.1',
+194 silly cache add   type: 'version' }
+195 silly addNamed gulp-useref@2.0.1
+196 verbose addNamed "2.0.1" is a plain semver version for gulp-useref
+197 silly mapToRegistry name gulp-useref
+198 silly mapToRegistry using default registry
+199 silly mapToRegistry registry https://registry.npmjs.org/
+200 silly mapToRegistry uri https://registry.npmjs.org/gulp-useref
+201 verbose addNameVersion registry:https://registry.npmjs.org/gulp-useref not in flight; fetching
+202 silly cache add args [ 'gulp-util@2.2.14', null ]
+203 verbose cache add spec gulp-util@2.2.14
+204 silly cache add parsed spec Result {
+204 silly cache add   raw: 'gulp-util@2.2.14',
+204 silly cache add   scope: null,
+204 silly cache add   name: 'gulp-util',
+204 silly cache add   rawSpec: '2.2.14',
+204 silly cache add   spec: '2.2.14',
+204 silly cache add   type: 'version' }
+205 silly addNamed gulp-util@2.2.14
+206 verbose addNamed "2.2.14" is a plain semver version for gulp-util
+207 silly mapToRegistry name gulp-util
+208 silly mapToRegistry using default registry
+209 silly mapToRegistry registry https://registry.npmjs.org/
+210 silly mapToRegistry uri https://registry.npmjs.org/gulp-util
+211 verbose addNameVersion registry:https://registry.npmjs.org/gulp-util not in flight; fetching
+212 silly cache add args [ 'jasmine-core@2.3.4', null ]
+213 verbose cache add spec jasmine-core@2.3.4
+214 silly cache add parsed spec Result {
+214 silly cache add   raw: 'jasmine-core@2.3.4',
+214 silly cache add   scope: null,
+214 silly cache add   name: 'jasmine-core',
+214 silly cache add   rawSpec: '2.3.4',
+214 silly cache add   spec: '2.3.4',
+214 silly cache add   type: 'version' }
+215 silly addNamed jasmine-core@2.3.4
+216 verbose addNamed "2.3.4" is a plain semver version for jasmine-core
+217 silly mapToRegistry name jasmine-core
+218 silly mapToRegistry using default registry
+219 silly mapToRegistry registry https://registry.npmjs.org/
+220 silly mapToRegistry uri https://registry.npmjs.org/jasmine-core
+221 verbose addNameVersion registry:https://registry.npmjs.org/jasmine-core not in flight; fetching
+222 silly cache add args [ 'karma@0.13.15', null ]
+223 verbose cache add spec karma@0.13.15
+224 silly cache add parsed spec Result {
+224 silly cache add   raw: 'karma@0.13.15',
+224 silly cache add   scope: null,
+224 silly cache add   name: 'karma',
+224 silly cache add   rawSpec: '0.13.15',
+224 silly cache add   spec: '0.13.15',
+224 silly cache add   type: 'version' }
+225 silly addNamed karma@0.13.15
+226 verbose addNamed "0.13.15" is a plain semver version for karma
+227 silly mapToRegistry name karma
+228 silly mapToRegistry using default registry
+229 silly mapToRegistry registry https://registry.npmjs.org/
+230 silly mapToRegistry uri https://registry.npmjs.org/karma
+231 verbose addNameVersion registry:https://registry.npmjs.org/karma not in flight; fetching
+232 silly cache add args [ 'karma-jasmine@0.1.6', null ]
+233 verbose cache add spec karma-jasmine@0.1.6
+234 silly cache add parsed spec Result {
+234 silly cache add   raw: 'karma-jasmine@0.1.6',
+234 silly cache add   scope: null,
+234 silly cache add   name: 'karma-jasmine',
+234 silly cache add   rawSpec: '0.1.6',
+234 silly cache add   spec: '0.1.6',
+234 silly cache add   type: 'version' }
+235 silly addNamed karma-jasmine@0.1.6
+236 verbose addNamed "0.1.6" is a plain semver version for karma-jasmine
+237 silly mapToRegistry name karma-jasmine
+238 silly mapToRegistry using default registry
+239 silly mapToRegistry registry https://registry.npmjs.org/
+240 silly mapToRegistry uri https://registry.npmjs.org/karma-jasmine
+241 verbose addNameVersion registry:https://registry.npmjs.org/karma-jasmine not in flight; fetching
+242 silly cache add args [ 'karma-phantomjs-launcher@0.2.1', null ]
+243 verbose cache add spec karma-phantomjs-launcher@0.2.1
+244 silly cache add parsed spec Result {
+244 silly cache add   raw: 'karma-phantomjs-launcher@0.2.1',
+244 silly cache add   scope: null,
+244 silly cache add   name: 'karma-phantomjs-launcher',
+244 silly cache add   rawSpec: '0.2.1',
+244 silly cache add   spec: '0.2.1',
+244 silly cache add   type: 'version' }
+245 silly addNamed karma-phantomjs-launcher@0.2.1
+246 verbose addNamed "0.2.1" is a plain semver version for karma-phantomjs-launcher
+247 silly mapToRegistry name karma-phantomjs-launcher
+248 silly mapToRegistry using default registry
+249 silly mapToRegistry registry https://registry.npmjs.org/
+250 silly mapToRegistry uri https://registry.npmjs.org/karma-phantomjs-launcher
+251 verbose addNameVersion registry:https://registry.npmjs.org/karma-phantomjs-launcher not in flight; fetching
+252 silly cache add args [ 'karma-spec-reporter@0.0.22', null ]
+253 verbose cache add spec karma-spec-reporter@0.0.22
+254 silly cache add parsed spec Result {
+254 silly cache add   raw: 'karma-spec-reporter@0.0.22',
+254 silly cache add   scope: null,
+254 silly cache add   name: 'karma-spec-reporter',
+254 silly cache add   rawSpec: '0.0.22',
+254 silly cache add   spec: '0.0.22',
+254 silly cache add   type: 'version' }
+255 silly addNamed karma-spec-reporter@0.0.22
+256 verbose addNamed "0.0.22" is a plain semver version for karma-spec-reporter
+257 silly mapToRegistry name karma-spec-reporter
+258 silly mapToRegistry using default registry
+259 silly mapToRegistry registry https://registry.npmjs.org/
+260 silly mapToRegistry uri https://registry.npmjs.org/karma-spec-reporter
+261 verbose addNameVersion registry:https://registry.npmjs.org/karma-spec-reporter not in flight; fetching
+262 silly cache add args [ 'phantomjs@1.9.18', null ]
+263 verbose cache add spec phantomjs@1.9.18
+264 silly cache add parsed spec Result {
+264 silly cache add   raw: 'phantomjs@1.9.18',
+264 silly cache add   scope: null,
+264 silly cache add   name: 'phantomjs',
+264 silly cache add   rawSpec: '1.9.18',
+264 silly cache add   spec: '1.9.18',
+264 silly cache add   type: 'version' }
+265 silly addNamed phantomjs@1.9.18
+266 verbose addNamed "1.9.18" is a plain semver version for phantomjs
+267 silly mapToRegistry name phantomjs
+268 silly mapToRegistry using default registry
+269 silly mapToRegistry registry https://registry.npmjs.org/
+270 silly mapToRegistry uri https://registry.npmjs.org/phantomjs
+271 verbose addNameVersion registry:https://registry.npmjs.org/phantomjs not in flight; fetching
+272 silly cache add args [ 'run-sequence@1.1.0', null ]
+273 verbose cache add spec run-sequence@1.1.0
+274 silly cache add parsed spec Result {
+274 silly cache add   raw: 'run-sequence@1.1.0',
+274 silly cache add   scope: null,
+274 silly cache add   name: 'run-sequence',
+274 silly cache add   rawSpec: '1.1.0',
+274 silly cache add   spec: '1.1.0',
+274 silly cache add   type: 'version' }
+275 silly addNamed run-sequence@1.1.0
+276 verbose addNamed "1.1.0" is a plain semver version for run-sequence
+277 silly mapToRegistry name run-sequence
+278 silly mapToRegistry using default registry
+279 silly mapToRegistry registry https://registry.npmjs.org/
+280 silly mapToRegistry uri https://registry.npmjs.org/run-sequence
+281 verbose addNameVersion registry:https://registry.npmjs.org/run-sequence not in flight; fetching
+282 silly cache add args [ 'shelljs@0.5.3', null ]
+283 verbose cache add spec shelljs@0.5.3
+284 silly cache add parsed spec Result {
+284 silly cache add   raw: 'shelljs@0.5.3',
+284 silly cache add   scope: null,
+284 silly cache add   name: 'shelljs',
+284 silly cache add   rawSpec: '0.5.3',
+284 silly cache add   spec: '0.5.3',
+284 silly cache add   type: 'version' }
+285 silly addNamed shelljs@0.5.3
+286 verbose addNamed "0.5.3" is a plain semver version for shelljs
+287 silly mapToRegistry name shelljs
+288 silly mapToRegistry using default registry
+289 silly mapToRegistry registry https://registry.npmjs.org/
+290 silly mapToRegistry uri https://registry.npmjs.org/shelljs
+291 verbose addNameVersion registry:https://registry.npmjs.org/shelljs not in flight; fetching
+292 verbose request uri https://registry.npmjs.org/gulp-clean
+293 verbose request no auth needed
+294 info attempt registry request try #1 at 16:15:11
+295 verbose request id 63c66b3a5c25ec74
+296 verbose etag "BYIFY9NGNR0RUGYV4V2E2GR06"
+297 http request GET https://registry.npmjs.org/gulp-clean
+298 verbose request uri https://registry.npmjs.org/gulp-concat
+299 verbose request no auth needed
+300 info attempt registry request try #1 at 16:15:11
+301 verbose etag "6NXBPKQ6TB5BMSRRG9OBZJHGF"
+302 http request GET https://registry.npmjs.org/gulp-concat
+303 verbose request uri https://registry.npmjs.org/gulp-flatten
+304 verbose request no auth needed
+305 info attempt registry request try #1 at 16:15:11
+306 verbose etag "42N8VVCB68SY7ZNMGT1BA4HTK"
+307 http request GET https://registry.npmjs.org/gulp-flatten
+308 verbose request uri https://registry.npmjs.org/gulp-footer
+309 verbose request no auth needed
+310 info attempt registry request try #1 at 16:15:11
+311 verbose etag "25RC48LWSC9P7G8TX5108XEKE"
+312 http request GET https://registry.npmjs.org/gulp-footer
+313 verbose request uri https://registry.npmjs.org/gulp-gh-pages
+314 verbose request no auth needed
+315 info attempt registry request try #1 at 16:15:11
+316 verbose etag "AEZF5AD0NVRZ42NR0OXV3DJQ0"
+317 http request GET https://registry.npmjs.org/gulp-gh-pages
+318 verbose request uri https://registry.npmjs.org/gulp-header
+319 verbose request no auth needed
+320 info attempt registry request try #1 at 16:15:11
+321 verbose etag "EFYXNQ2BJ9BD5LA7LTFF8FYC5"
+322 http request GET https://registry.npmjs.org/gulp-header
+323 verbose request uri https://registry.npmjs.org/gulp-karma
+324 verbose request no auth needed
+325 info attempt registry request try #1 at 16:15:11
+326 verbose etag "2J51SNCN45Y7VLJYAWYVA0U4V"
+327 http request GET https://registry.npmjs.org/gulp-karma
+328 verbose request uri https://registry.npmjs.org/gulp-jasmine
+329 verbose request no auth needed
+330 info attempt registry request try #1 at 16:15:11
+331 verbose etag "1RFMF7Z35WNHOP3EBWYTUXYJH"
+332 http request GET https://registry.npmjs.org/gulp-jasmine
+333 verbose request uri https://registry.npmjs.org/gulp-if
+334 verbose request no auth needed
+335 info attempt registry request try #1 at 16:15:11
+336 verbose etag "2918BK2FPOZPPNMP7YOUEVQTM"
+337 http request GET https://registry.npmjs.org/gulp-if
+338 verbose request uri https://registry.npmjs.org/gulp-less
+339 verbose request no auth needed
+340 info attempt registry request try #1 at 16:15:11
+341 verbose etag "5BAVT4YXX2QU1N1IP3XVB9B87"
+342 http request GET https://registry.npmjs.org/gulp-less
+343 verbose request uri https://registry.npmjs.org/gulp-dedupe
+344 verbose request no auth needed
+345 info attempt registry request try #1 at 16:15:11
+346 verbose etag "7SPZS1AFC9U2IO316Y5IF8GWB"
+347 http request GET https://registry.npmjs.org/gulp-dedupe
+348 verbose request uri https://registry.npmjs.org/bower
+349 verbose request no auth needed
+350 info attempt registry request try #1 at 16:15:11
+351 verbose etag "2UZ1USYDC3PX7QIF6P9NM7HWW"
+352 http request GET https://registry.npmjs.org/bower
+353 verbose request uri https://registry.npmjs.org/gulp
+354 verbose request no auth needed
+355 info attempt registry request try #1 at 16:15:11
+356 verbose etag "614NFL7VZ5KHZ9C3SQJRV1MYV"
+357 http request GET https://registry.npmjs.org/gulp
+358 verbose request uri https://registry.npmjs.org/gulp-serve
+359 verbose request no auth needed
+360 info attempt registry request try #1 at 16:15:11
+361 verbose etag "F0NY6DC79SS05TB70RMU6P0QD"
+362 http request GET https://registry.npmjs.org/gulp-serve
+363 verbose request uri https://registry.npmjs.org/gulp-rename
+364 verbose request no auth needed
+365 info attempt registry request try #1 at 16:15:11
+366 verbose etag "4A77MDW5JRSND71GCJIXT3XA6"
+367 http request GET https://registry.npmjs.org/gulp-rename
+368 verbose request uri https://registry.npmjs.org/gulp-sass
+369 verbose request no auth needed
+370 info attempt registry request try #1 at 16:15:11
+371 verbose etag "7OSNK0XLFKKBWZ3PM9DJFSVRY"
+372 http request GET https://registry.npmjs.org/gulp-sass
+373 verbose request uri https://registry.npmjs.org/gulp-useref
+374 verbose request no auth needed
+375 info attempt registry request try #1 at 16:15:11
+376 verbose etag "3F64RKR8ADUQ6NLMA1CFM80AC"
+377 http request GET https://registry.npmjs.org/gulp-useref
+378 verbose request uri https://registry.npmjs.org/gulp-minify-css
+379 verbose request no auth needed
+380 info attempt registry request try #1 at 16:15:11
+381 verbose etag "3UK8EJJCF7CR44MEQYIWEWQEP"
+382 http request GET https://registry.npmjs.org/gulp-minify-css
+383 verbose request uri https://registry.npmjs.org/gulp-uglify
+384 verbose request no auth needed
+385 info attempt registry request try #1 at 16:15:11
+386 verbose etag "7QGAG7H8DLPJ5ZMYLNLDMUNRB"
+387 http request GET https://registry.npmjs.org/gulp-uglify
+388 verbose request uri https://registry.npmjs.org/gulp-util
+389 verbose request no auth needed
+390 info attempt registry request try #1 at 16:15:11
+391 verbose etag "AITPQAZ1821JT2ZFUWO5XSZP2"
+392 http request GET https://registry.npmjs.org/gulp-util
+393 verbose request uri https://registry.npmjs.org/jasmine-core
+394 verbose request no auth needed
+395 info attempt registry request try #1 at 16:15:11
+396 verbose etag "BEIRIPJFU8OAVC0KOUI74RW3O"
+397 http request GET https://registry.npmjs.org/jasmine-core
+398 verbose request uri https://registry.npmjs.org/karma-jasmine
+399 verbose request no auth needed
+400 info attempt registry request try #1 at 16:15:11
+401 verbose etag "COQIOJLMIVMR8QNMQ6TVT7BP7"
+402 http request GET https://registry.npmjs.org/karma-jasmine
+403 verbose request uri https://registry.npmjs.org/karma-phantomjs-launcher
+404 verbose request no auth needed
+405 info attempt registry request try #1 at 16:15:11
+406 verbose etag "7LMO4OC6I0SXR7CM5SGZDR60S"
+407 http request GET https://registry.npmjs.org/karma-phantomjs-launcher
+408 verbose request uri https://registry.npmjs.org/run-sequence
+409 verbose request no auth needed
+410 info attempt registry request try #1 at 16:15:11
+411 verbose etag "DRCVPS6622UZK77HSVZN77WZM"
+412 http request GET https://registry.npmjs.org/run-sequence
+413 verbose request uri https://registry.npmjs.org/karma
+414 verbose request no auth needed
+415 info attempt registry request try #1 at 16:15:11
+416 verbose etag "4NWS6DVDS6IIF8KVF7W4S2XRC"
+417 http request GET https://registry.npmjs.org/karma
+418 verbose request uri https://registry.npmjs.org/karma-spec-reporter
+419 verbose request no auth needed
+420 info attempt registry request try #1 at 16:15:11
+421 verbose etag "1GKB13GQR2F6E2UZIS1G47YP5"
+422 http request GET https://registry.npmjs.org/karma-spec-reporter
+423 verbose request uri https://registry.npmjs.org/phantomjs
+424 verbose request no auth needed
+425 info attempt registry request try #1 at 16:15:11
+426 verbose etag "7YXE3FG9OISR7K6EOAY5UBN8G"
+427 http request GET https://registry.npmjs.org/phantomjs
+428 verbose request uri https://registry.npmjs.org/shelljs
+429 verbose request no auth needed
+430 info attempt registry request try #1 at 16:15:11
+431 verbose etag "2GJ5CCG6N4M3Q7DK0Y3Z9CHHN"
+432 http request GET https://registry.npmjs.org/shelljs
+433 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+434 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+435 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+436 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+437 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+438 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+439 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+440 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+441 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+442 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+443 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+444 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+445 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+446 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+447 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+448 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+449 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+450 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+451 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+452 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+453 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+454 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+455 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+456 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+457 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+458 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+459 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+460 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+461 info attempt registry request try #2 at 16:15:22
+462 verbose etag "BYIFY9NGNR0RUGYV4V2E2GR06"
+463 http request GET https://registry.npmjs.org/gulp-clean
+464 info attempt registry request try #2 at 16:15:22
+465 verbose etag "42N8VVCB68SY7ZNMGT1BA4HTK"
+466 http request GET https://registry.npmjs.org/gulp-flatten
+467 info attempt registry request try #2 at 16:15:22
+468 verbose etag "6NXBPKQ6TB5BMSRRG9OBZJHGF"
+469 http request GET https://registry.npmjs.org/gulp-concat
+470 info attempt registry request try #2 at 16:15:22
+471 verbose etag "25RC48LWSC9P7G8TX5108XEKE"
+472 http request GET https://registry.npmjs.org/gulp-footer
+473 info attempt registry request try #2 at 16:15:22
+474 verbose etag "EFYXNQ2BJ9BD5LA7LTFF8FYC5"
+475 http request GET https://registry.npmjs.org/gulp-header
+476 info attempt registry request try #2 at 16:15:22
+477 verbose etag "F0NY6DC79SS05TB70RMU6P0QD"
+478 http request GET https://registry.npmjs.org/gulp-serve
+479 info attempt registry request try #2 at 16:15:22
+480 verbose etag "AITPQAZ1821JT2ZFUWO5XSZP2"
+481 http request GET https://registry.npmjs.org/gulp-util
+482 info attempt registry request try #2 at 16:15:22
+483 verbose etag "1RFMF7Z35WNHOP3EBWYTUXYJH"
+484 http request GET https://registry.npmjs.org/gulp-jasmine
+485 info attempt registry request try #2 at 16:15:22
+486 verbose etag "3UK8EJJCF7CR44MEQYIWEWQEP"
+487 http request GET https://registry.npmjs.org/gulp-minify-css
+488 info attempt registry request try #2 at 16:15:22
+489 verbose etag "7SPZS1AFC9U2IO316Y5IF8GWB"
+490 http request GET https://registry.npmjs.org/gulp-dedupe
+491 info attempt registry request try #2 at 16:15:22
+492 verbose etag "7OSNK0XLFKKBWZ3PM9DJFSVRY"
+493 http request GET https://registry.npmjs.org/gulp-sass
+494 info attempt registry request try #2 at 16:15:22
+495 verbose etag "3F64RKR8ADUQ6NLMA1CFM80AC"
+496 http request GET https://registry.npmjs.org/gulp-useref
+497 info attempt registry request try #2 at 16:15:22
+498 verbose etag "BEIRIPJFU8OAVC0KOUI74RW3O"
+499 http request GET https://registry.npmjs.org/jasmine-core
+500 info attempt registry request try #2 at 16:15:22
+501 verbose etag "5BAVT4YXX2QU1N1IP3XVB9B87"
+502 http request GET https://registry.npmjs.org/gulp-less
+503 info attempt registry request try #2 at 16:15:22
+504 verbose etag "2J51SNCN45Y7VLJYAWYVA0U4V"
+505 http request GET https://registry.npmjs.org/gulp-karma
+506 info attempt registry request try #2 at 16:15:22
+507 verbose etag "7QGAG7H8DLPJ5ZMYLNLDMUNRB"
+508 http request GET https://registry.npmjs.org/gulp-uglify
+509 info attempt registry request try #2 at 16:15:22
+510 verbose etag "614NFL7VZ5KHZ9C3SQJRV1MYV"
+511 http request GET https://registry.npmjs.org/gulp
+512 info attempt registry request try #2 at 16:15:22
+513 verbose etag "7LMO4OC6I0SXR7CM5SGZDR60S"
+514 http request GET https://registry.npmjs.org/karma-phantomjs-launcher
+515 info attempt registry request try #2 at 16:15:22
+516 verbose etag "2918BK2FPOZPPNMP7YOUEVQTM"
+517 http request GET https://registry.npmjs.org/gulp-if
+518 info attempt registry request try #2 at 16:15:22
+519 verbose etag "COQIOJLMIVMR8QNMQ6TVT7BP7"
+520 http request GET https://registry.npmjs.org/karma-jasmine
+521 info attempt registry request try #2 at 16:15:22
+522 verbose etag "4A77MDW5JRSND71GCJIXT3XA6"
+523 http request GET https://registry.npmjs.org/gulp-rename
+524 info attempt registry request try #2 at 16:15:22
+525 verbose etag "2UZ1USYDC3PX7QIF6P9NM7HWW"
+526 http request GET https://registry.npmjs.org/bower
+527 info attempt registry request try #2 at 16:15:22
+528 verbose etag "DRCVPS6622UZK77HSVZN77WZM"
+529 http request GET https://registry.npmjs.org/run-sequence
+530 info attempt registry request try #2 at 16:15:22
+531 verbose etag "4NWS6DVDS6IIF8KVF7W4S2XRC"
+532 http request GET https://registry.npmjs.org/karma
+533 info attempt registry request try #2 at 16:15:22
+534 verbose etag "2GJ5CCG6N4M3Q7DK0Y3Z9CHHN"
+535 http request GET https://registry.npmjs.org/shelljs
+536 info attempt registry request try #2 at 16:15:22
+537 verbose etag "7YXE3FG9OISR7K6EOAY5UBN8G"
+538 http request GET https://registry.npmjs.org/phantomjs
+539 info attempt registry request try #2 at 16:15:22
+540 verbose etag "1GKB13GQR2F6E2UZIS1G47YP5"
+541 http request GET https://registry.npmjs.org/karma-spec-reporter
+542 info attempt registry request try #2 at 16:15:22
+543 verbose etag "AEZF5AD0NVRZ42NR0OXV3DJQ0"
+544 http request GET https://registry.npmjs.org/gulp-gh-pages
+545 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+546 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+547 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+548 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+549 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+550 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+551 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+552 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+553 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+554 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+555 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+556 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+557 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+558 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+559 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+560 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+561 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+562 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+563 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+564 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+565 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+566 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+567 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+568 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+569 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+570 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+571 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+572 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+573 info attempt registry request try #3 at 16:16:23
+574 verbose etag "BYIFY9NGNR0RUGYV4V2E2GR06"
+575 http request GET https://registry.npmjs.org/gulp-clean
+576 info attempt registry request try #3 at 16:16:23
+577 verbose etag "42N8VVCB68SY7ZNMGT1BA4HTK"
+578 http request GET https://registry.npmjs.org/gulp-flatten
+579 info attempt registry request try #3 at 16:16:23
+580 verbose etag "6NXBPKQ6TB5BMSRRG9OBZJHGF"
+581 http request GET https://registry.npmjs.org/gulp-concat
+582 info attempt registry request try #3 at 16:16:23
+583 verbose etag "25RC48LWSC9P7G8TX5108XEKE"
+584 http request GET https://registry.npmjs.org/gulp-footer
+585 info attempt registry request try #3 at 16:16:23
+586 verbose etag "F0NY6DC79SS05TB70RMU6P0QD"
+587 http request GET https://registry.npmjs.org/gulp-serve
+588 info attempt registry request try #3 at 16:16:23
+589 verbose etag "EFYXNQ2BJ9BD5LA7LTFF8FYC5"
+590 http request GET https://registry.npmjs.org/gulp-header
+591 info attempt registry request try #3 at 16:16:23
+592 verbose etag "AITPQAZ1821JT2ZFUWO5XSZP2"
+593 http request GET https://registry.npmjs.org/gulp-util
+594 info attempt registry request try #3 at 16:16:23
+595 verbose etag "2918BK2FPOZPPNMP7YOUEVQTM"
+596 http request GET https://registry.npmjs.org/gulp-if
+597 info attempt registry request try #3 at 16:16:23
+598 verbose etag "7LMO4OC6I0SXR7CM5SGZDR60S"
+599 http request GET https://registry.npmjs.org/karma-phantomjs-launcher
+600 info attempt registry request try #3 at 16:16:23
+601 verbose etag "7YXE3FG9OISR7K6EOAY5UBN8G"
+602 http request GET https://registry.npmjs.org/phantomjs
+603 info attempt registry request try #3 at 16:16:23
+604 verbose etag "1GKB13GQR2F6E2UZIS1G47YP5"
+605 http request GET https://registry.npmjs.org/karma-spec-reporter
+606 info attempt registry request try #3 at 16:16:23
+607 verbose etag "3UK8EJJCF7CR44MEQYIWEWQEP"
+608 http request GET https://registry.npmjs.org/gulp-minify-css
+609 info attempt registry request try #3 at 16:16:23
+610 verbose etag "3F64RKR8ADUQ6NLMA1CFM80AC"
+611 http request GET https://registry.npmjs.org/gulp-useref
+612 info attempt registry request try #3 at 16:16:23
+613 verbose etag "BEIRIPJFU8OAVC0KOUI74RW3O"
+614 http request GET https://registry.npmjs.org/jasmine-core
+615 info attempt registry request try #3 at 16:16:23
+616 verbose etag "7QGAG7H8DLPJ5ZMYLNLDMUNRB"
+617 http request GET https://registry.npmjs.org/gulp-uglify
+618 info attempt registry request try #3 at 16:16:23
+619 verbose etag "4NWS6DVDS6IIF8KVF7W4S2XRC"
+620 http request GET https://registry.npmjs.org/karma
+621 info attempt registry request try #3 at 16:16:23
+622 verbose etag "1RFMF7Z35WNHOP3EBWYTUXYJH"
+623 http request GET https://registry.npmjs.org/gulp-jasmine
+624 info attempt registry request try #3 at 16:16:23
+625 verbose etag "4A77MDW5JRSND71GCJIXT3XA6"
+626 http request GET https://registry.npmjs.org/gulp-rename
+627 info attempt registry request try #3 at 16:16:23
+628 verbose etag "2J51SNCN45Y7VLJYAWYVA0U4V"
+629 http request GET https://registry.npmjs.org/gulp-karma
+630 info attempt registry request try #3 at 16:16:23
+631 verbose etag "2UZ1USYDC3PX7QIF6P9NM7HWW"
+632 http request GET https://registry.npmjs.org/bower
+633 info attempt registry request try #3 at 16:16:23
+634 verbose etag "7OSNK0XLFKKBWZ3PM9DJFSVRY"
+635 http request GET https://registry.npmjs.org/gulp-sass
+636 info attempt registry request try #3 at 16:16:23
+637 verbose etag "614NFL7VZ5KHZ9C3SQJRV1MYV"
+638 http request GET https://registry.npmjs.org/gulp
+639 info attempt registry request try #3 at 16:16:23
+640 verbose etag "AEZF5AD0NVRZ42NR0OXV3DJQ0"
+641 http request GET https://registry.npmjs.org/gulp-gh-pages
+642 info attempt registry request try #3 at 16:16:23
+643 verbose etag "5BAVT4YXX2QU1N1IP3XVB9B87"
+644 http request GET https://registry.npmjs.org/gulp-less
+645 info attempt registry request try #3 at 16:16:23
+646 verbose etag "DRCVPS6622UZK77HSVZN77WZM"
+647 http request GET https://registry.npmjs.org/run-sequence
+648 info attempt registry request try #3 at 16:16:23
+649 verbose etag "7SPZS1AFC9U2IO316Y5IF8GWB"
+650 http request GET https://registry.npmjs.org/gulp-dedupe
+651 info attempt registry request try #3 at 16:16:23
+652 verbose etag "COQIOJLMIVMR8QNMQ6TVT7BP7"
+653 http request GET https://registry.npmjs.org/karma-jasmine
+654 info attempt registry request try #3 at 16:16:23
+655 verbose etag "2GJ5CCG6N4M3Q7DK0Y3Z9CHHN"
+656 http request GET https://registry.npmjs.org/shelljs
+657 silly get cb [ 304, undefined ]
+658 verbose etag https://registry.npmjs.org/gulp-clean from cache
+659 verbose get saving gulp-clean to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-clean\.cache.json
+660 warn deprecated gulp-clean@0.3.1: use gulp-rimraf instead
+661 silly cache afterAdd gulp-clean@0.3.1
+662 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-clean\0.3.1\package\package.json not in flight; writing
+663 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-clean\0.3.1\package\package.json written
+664 silly get cb [ 304, undefined ]
+665 verbose etag https://registry.npmjs.org/gulp-util from cache
+666 verbose get saving gulp-util to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-util\.cache.json
+667 silly get cb [ 304, undefined ]
+668 verbose etag https://registry.npmjs.org/gulp-header from cache
+669 verbose get saving gulp-header to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-header\.cache.json
+670 silly get cb [ 304, undefined ]
+671 verbose etag https://registry.npmjs.org/gulp-concat from cache
+672 verbose get saving gulp-concat to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-concat\.cache.json
+673 silly get cb [ 304, undefined ]
+674 verbose etag https://registry.npmjs.org/gulp-flatten from cache
+675 verbose get saving gulp-flatten to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-flatten\.cache.json
+676 silly get cb [ 304, undefined ]
+677 verbose etag https://registry.npmjs.org/gulp-footer from cache
+678 verbose get saving gulp-footer to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-footer\.cache.json
+679 silly get cb [ 304, undefined ]
+680 verbose etag https://registry.npmjs.org/gulp-serve from cache
+681 verbose get saving gulp-serve to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-serve\.cache.json
+682 silly cache afterAdd gulp-footer@1.0.5
+683 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-footer\1.0.5\package\package.json not in flight; writing
+684 silly cache afterAdd gulp-concat@2.6.0
+685 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-concat\2.6.0\package\package.json not in flight; writing
+686 silly cache afterAdd gulp-util@2.2.14
+687 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-util\2.2.14\package\package.json not in flight; writing
+688 silly cache afterAdd gulp-header@1.7.1
+689 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-header\1.7.1\package\package.json not in flight; writing
+690 silly get cb [ 304, undefined ]
+691 verbose etag https://registry.npmjs.org/phantomjs from cache
+692 verbose get saving phantomjs to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\phantomjs\.cache.json
+693 silly get cb [ 304, undefined ]
+694 verbose etag https://registry.npmjs.org/karma-spec-reporter from cache
+695 verbose get saving karma-spec-reporter to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\karma-spec-reporter\.cache.json
+696 silly get cb [ 304, undefined ]
+697 verbose etag https://registry.npmjs.org/gulp-if from cache
+698 verbose get saving gulp-if to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-if\.cache.json
+699 silly get cb [ 304, undefined ]
+700 verbose etag https://registry.npmjs.org/karma-phantomjs-launcher from cache
+701 verbose get saving karma-phantomjs-launcher to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\karma-phantomjs-launcher\.cache.json
+702 silly get cb [ 304, undefined ]
+703 verbose etag https://registry.npmjs.org/gulp-rename from cache
+704 verbose get saving gulp-rename to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-rename\.cache.json
+705 silly get cb [ 304, undefined ]
+706 verbose etag https://registry.npmjs.org/gulp-less from cache
+707 verbose get saving gulp-less to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-less\.cache.json
+708 silly get cb [ 304, undefined ]
+709 verbose etag https://registry.npmjs.org/gulp-karma from cache
+710 verbose get saving gulp-karma to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-karma\.cache.json
+711 silly get cb [ 304, undefined ]
+712 verbose etag https://registry.npmjs.org/run-sequence from cache
+713 verbose get saving run-sequence to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\run-sequence\.cache.json
+714 silly cache afterAdd gulp-flatten@0.2.0
+715 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-flatten\0.2.0\package\package.json not in flight; writing
+716 silly get cb [ 304, undefined ]
+717 verbose etag https://registry.npmjs.org/gulp-useref from cache
+718 verbose get saving gulp-useref to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-useref\.cache.json
+719 silly get cb [ 304, undefined ]
+720 verbose etag https://registry.npmjs.org/shelljs from cache
+721 verbose get saving shelljs to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\shelljs\.cache.json
+722 silly get cb [ 304, undefined ]
+723 verbose etag https://registry.npmjs.org/jasmine-core from cache
+724 verbose get saving jasmine-core to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\jasmine-core\.cache.json
+725 silly get cb [ 304, undefined ]
+726 verbose etag https://registry.npmjs.org/gulp-gh-pages from cache
+727 verbose get saving gulp-gh-pages to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-gh-pages\.cache.json
+728 silly get cb [ 304, undefined ]
+729 verbose etag https://registry.npmjs.org/karma from cache
+730 verbose get saving karma to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\karma\.cache.json
+731 silly get cb [ 304, undefined ]
+732 verbose etag https://registry.npmjs.org/gulp-sass from cache
+733 verbose get saving gulp-sass to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-sass\.cache.json
+734 silly get cb [ 304, undefined ]
+735 verbose etag https://registry.npmjs.org/gulp-dedupe from cache
+736 verbose get saving gulp-dedupe to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-dedupe\.cache.json
+737 silly get cb [ 304, undefined ]
+738 verbose etag https://registry.npmjs.org/gulp from cache
+739 verbose get saving gulp to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp\.cache.json
+740 silly get cb [ 304, undefined ]
+741 verbose etag https://registry.npmjs.org/gulp-uglify from cache
+742 verbose get saving gulp-uglify to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-uglify\.cache.json
+743 silly get cb [ 304, undefined ]
+744 verbose etag https://registry.npmjs.org/bower from cache
+745 verbose get saving bower to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\bower\.cache.json
+746 silly get cb [ 304, undefined ]
+747 verbose etag https://registry.npmjs.org/karma-jasmine from cache
+748 verbose get saving karma-jasmine to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\karma-jasmine\.cache.json
+749 silly cache afterAdd gulp-serve@0.1.0
+750 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-serve\0.1.0\package\package.json not in flight; writing
+751 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-footer\1.0.5\package\package.json written
+752 silly get cb [ 304, undefined ]
+753 verbose etag https://registry.npmjs.org/gulp-minify-css from cache
+754 verbose get saving gulp-minify-css to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-minify-css\.cache.json
+755 silly get cb [ 304, undefined ]
+756 verbose etag https://registry.npmjs.org/gulp-jasmine from cache
+757 verbose get saving gulp-jasmine to C:\Users\stephen\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-jasmine\.cache.json
+758 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-concat\2.6.0\package\package.json written
+759 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-util\2.2.14\package\package.json written
+760 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-header\1.7.1\package\package.json written
+761 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-flatten\0.2.0\package\package.json written
+762 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-serve\0.1.0\package\package.json written
+763 silly mapToRegistry name phantomjs
+764 silly mapToRegistry using default registry
+765 silly mapToRegistry registry https://registry.npmjs.org/
+766 silly mapToRegistry uri https://registry.npmjs.org/phantomjs
+767 verbose addRemoteTarball https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz not in flight; adding
+768 verbose addRemoteTarball [ 'https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz',
+768 verbose addRemoteTarball   'e876fce89b143a6c01c24e0332ef3822851cace1' ]
+769 silly mapToRegistry name karma
+770 silly mapToRegistry using default registry
+771 silly mapToRegistry registry https://registry.npmjs.org/
+772 silly mapToRegistry uri https://registry.npmjs.org/karma
+773 verbose addRemoteTarball https://registry.npmjs.org/karma/-/karma-0.13.15.tgz not in flight; adding
+774 verbose addRemoteTarball [ 'https://registry.npmjs.org/karma/-/karma-0.13.15.tgz',
+774 verbose addRemoteTarball   '71c3925651728a05ab4980a6e894ce3aa5e8c5c0' ]
+775 warn deprecated gulp-minify-css@1.2.1: Please use gulp-clean-css
+776 silly cache afterAdd gulp-karma@0.0.5
+777 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-karma\0.0.5\package\package.json not in flight; writing
+778 silly cache afterAdd karma-phantomjs-launcher@0.2.1
+779 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\karma-phantomjs-launcher\0.2.1\package\package.json not in flight; writing
+780 silly cache afterAdd karma-spec-reporter@0.0.22
+781 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\karma-spec-reporter\0.0.22\package\package.json not in flight; writing
+782 silly cache afterAdd gulp-if@2.0.0
+783 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-if\2.0.0\package\package.json not in flight; writing
+784 silly cache afterAdd run-sequence@1.1.0
+785 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\run-sequence\1.1.0\package\package.json not in flight; writing
+786 silly cache afterAdd gulp-rename@1.2.2
+787 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-rename\1.2.2\package\package.json not in flight; writing
+788 silly cache afterAdd gulp-less@3.0.3
+789 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-less\3.0.3\package\package.json not in flight; writing
+790 silly cache afterAdd gulp-gh-pages@0.5.4
+791 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-gh-pages\0.5.4\package\package.json not in flight; writing
+792 info retry fetch attempt 1 at 16:16:24
+793 info attempt registry request try #1 at 16:16:24
+794 http fetch GET https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+795 silly cache afterAdd gulp-useref@2.0.1
+796 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-useref\2.0.1\package\package.json not in flight; writing
+797 silly cache afterAdd jasmine-core@2.3.4
+798 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\jasmine-core\2.3.4\package\package.json not in flight; writing
+799 silly cache afterAdd gulp-uglify@1.4.2
+800 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-uglify\1.4.2\package\package.json not in flight; writing
+801 silly cache afterAdd shelljs@0.5.3
+802 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\shelljs\0.5.3\package\package.json not in flight; writing
+803 silly cache afterAdd gulp-dedupe@0.0.2
+804 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-dedupe\0.0.2\package\package.json not in flight; writing
+805 info retry fetch attempt 1 at 16:16:25
+806 info attempt registry request try #1 at 16:16:25
+807 http fetch GET https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+808 silly cache afterAdd gulp-sass@2.1.0
+809 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-sass\2.1.0\package\package.json not in flight; writing
+810 silly cache afterAdd bower@1.6.5
+811 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\bower\1.6.5\package\package.json not in flight; writing
+812 silly cache afterAdd karma-jasmine@0.1.6
+813 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\karma-jasmine\0.1.6\package\package.json not in flight; writing
+814 silly cache afterAdd gulp@3.9.0
+815 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp\3.9.0\package\package.json not in flight; writing
+816 silly cache afterAdd gulp-jasmine@2.2.0
+817 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-jasmine\2.2.0\package\package.json not in flight; writing
+818 silly cache afterAdd gulp-minify-css@1.2.1
+819 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-minify-css\1.2.1\package\package.json not in flight; writing
+820 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\karma-phantomjs-launcher\0.2.1\package\package.json written
+821 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-karma\0.0.5\package\package.json written
+822 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\karma-spec-reporter\0.0.22\package\package.json written
+823 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\run-sequence\1.1.0\package\package.json written
+824 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-rename\1.2.2\package\package.json written
+825 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-less\3.0.3\package\package.json written
+826 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-gh-pages\0.5.4\package\package.json written
+827 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\jasmine-core\2.3.4\package\package.json written
+828 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-uglify\1.4.2\package\package.json written
+829 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-if\2.0.0\package\package.json written
+830 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-useref\2.0.1\package\package.json written
+831 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-dedupe\0.0.2\package\package.json written
+832 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-sass\2.1.0\package\package.json written
+833 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\shelljs\0.5.3\package\package.json written
+834 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\karma-jasmine\0.1.6\package\package.json written
+835 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\bower\1.6.5\package\package.json written
+836 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp\3.9.0\package\package.json written
+837 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-jasmine\2.2.0\package\package.json written
+838 verbose afterAdd C:\Users\stephen\AppData\Roaming\npm-cache\gulp-minify-css\1.2.1\package\package.json written
+839 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+840 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+841 info attempt registry request try #2 at 16:16:36
+842 http fetch GET https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+843 info attempt registry request try #2 at 16:16:36
+844 http fetch GET https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+845 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+846 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+847 info attempt registry request try #3 at 16:17:37
+848 http fetch GET https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+849 info attempt registry request try #3 at 16:17:37
+850 http fetch GET https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+851 error fetch failed https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+852 warn retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+853 error fetch failed https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+854 warn retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+855 info retry fetch attempt 2 at 16:17:48
+856 info attempt registry request try #1 at 16:17:48
+857 http fetch GET https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+858 info retry fetch attempt 2 at 16:17:48
+859 info attempt registry request try #1 at 16:17:48
+860 http fetch GET https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+861 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+862 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+863 info attempt registry request try #2 at 16:17:59
+864 http fetch GET https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+865 info attempt registry request try #2 at 16:17:59
+866 http fetch GET https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+867 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+868 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+869 info attempt registry request try #3 at 16:19:00
+870 http fetch GET https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+871 info attempt registry request try #3 at 16:19:00
+872 http fetch GET https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+873 error fetch failed https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+874 warn retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+875 error fetch failed https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+876 warn retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+877 info retry fetch attempt 3 at 16:20:01
+878 info attempt registry request try #1 at 16:20:01
+879 http fetch GET https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+880 info retry fetch attempt 3 at 16:20:01
+881 info attempt registry request try #1 at 16:20:01
+882 http fetch GET https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+883 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+884 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+885 info attempt registry request try #2 at 16:20:13
+886 http fetch GET https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+887 info attempt registry request try #2 at 16:20:13
+888 http fetch GET https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+889 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+890 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 185.31.17.162:443
+891 info attempt registry request try #3 at 16:21:14
+892 http fetch GET https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+893 info attempt registry request try #3 at 16:21:14
+894 http fetch GET https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+895 error fetch failed https://registry.npmjs.org/karma/-/karma-0.13.15.tgz
+896 error fetch failed https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.18.tgz
+897 verbose stack Error: connect ECONNREFUSED 185.31.17.162:443
+897 verbose stack     at Object.exports._errnoException (util.js:870:11)
+897 verbose stack     at exports._exceptionWithHostPort (util.js:893:20)
+897 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+898 verbose cwd C:\DevTools\Git\angular-common-quickstart\dist
+899 error Windows_NT 10.0.10586
+900 error argv "E:\\DevTools\\node.exe" "E:\\DevTools\\node_modules\\npm\\bin\\npm-cli.js" "install"
+901 error node v4.3.1
+902 error npm  v2.14.12
+903 error code ECONNREFUSED
+904 error errno ECONNREFUSED
+905 error syscall connect
+906 error Error: connect ECONNREFUSED 185.31.17.162:443
+906 error     at Object.exports._errnoException (util.js:870:11)
+906 error     at exports._exceptionWithHostPort (util.js:893:20)
+906 error     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1062:14)
+906 error  { [Error: connect ECONNREFUSED 185.31.17.162:443]
+906 error   code: 'ECONNREFUSED',
+906 error   errno: 'ECONNREFUSED',
+906 error   syscall: 'connect',
+906 error   address: '185.31.17.162',
+906 error   port: 443,
+906 error   parent: 'webapp_seed' }
+907 error If you are behind a proxy, please make sure that the
+907 error 'proxy' config is set properly.  See: 'npm help config'
+908 verbose exit [ 1, true ]

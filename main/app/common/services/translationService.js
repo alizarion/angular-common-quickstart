@@ -25,7 +25,7 @@
  */
 'use strict';
 
-angular.module('MusicManager')
+angular.module('T4HTML')
     .service('TranslationService',
     ['$q','$translate','$translatePartialLoader', function($q, $translate, $translatePartialLoader) {
         return function() {

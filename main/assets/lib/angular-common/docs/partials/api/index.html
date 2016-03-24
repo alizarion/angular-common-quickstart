@@ -1,0 +1,282 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="api-reference-page"><h2 id="angularjs-api-docs" id="angularjs-api-docs">AngularJS API Docs</h2>
+<h3 id="quoi-que-c-est-" id="angularjs-api-docs_quoi-que-cest">Quoi que c&#39;est ?</h3>
+<p>Cette librairie a pour objectif la mise en commun des composants (génériques) AngularJS développés par Itesoft, afin de capitaliser au mieux le travail accompli par les différentes équipes.</p>
+<p><a href="http://alizarion.github.io/angular-common/">demo and documentation</a></p>
+<h3 id="pr-requis" id="angularjs-api-docs_prérequis">Prérequis</h3>
+<p><a href="https://git-scm.com/downloads">git</a> avec prise en charge du prompt sous windows.</p>
+<p><a href="https://www.npmjs.com/package/npm">npm</a>.  testé et validé avec la version <a href="https://nodejs.org/download/release/v4.2.2/">4.2.2 de nodejs</a>.</p>
+<p>installer bower en globale :</p>
+<pre><code>        npm install bower -g
+</code></pre><h3 id="comment-l-int-grer-dans-mon-projet-" id="angularjs-api-docs_comment-lintégrer-dans-mon-projet">Comment l&#39;intégrer dans mon projet ?</h3>
+<p>Un template permettant de demarrer rapidement un nouveau projet est disponible <a href="https://github.com/alizarion/angular-common-quickstart">ICI</a>.</p>
+<pre><code>    git clone https://github.com/alizarion/angular-common-quickstart
+    cd angular-common-quickstart
+    npm install
+    bower install
+</code></pre><h3 id="installation" id="angularjs-api-docs_installation">Installation</h3>
+<pre><code>            git clone https://github.com/alizarion/angular-common.git
+            npm install
+            bower install
+</code></pre><h3 id="build" id="angularjs-api-docs_build">Build</h3>
+<pre><code>           gulp build
+</code></pre><h3 id="structure-du-projet" id="angularjs-api-docs_structure-du-projet">Structure du projet</h3>
+<p>Pour mieux s&#39;y retrouver, le projet est structuré de la façon suivante.</p>
+<pre><code>                 .
+                 |--- docs(ne pas commité, généré automatiquement par la commande gulp docs)
+                 |
+                 |--- dist(ne pas commité, généré automatiquement par la commande gulp build)
+                 |
+                 |--- main
+                 |    |--- index.html
+                 |    |--- app
+                 |    |    |
+                 |    |    |--- composite
+                 |    |    |    |
+                 |    |    |    |--- directive1
+                 |    |    |    |    |--- directive1.js
+                 |    |    |    |    |--- directive1ChildDirective.js
+                 |    |    |    |    |--- directive1Service.js
+                 |    |    |    |--- directive2
+                 |    |    |    |    |--- directive2.js
+                 |    |    |    |    |--- directive2ChildDirective.js
+                 |    |    |    |    |--- directive2Filter.js
+                 |    |    |    |    |--- directive2Doc.ngdoc
+                 |    |    |    |
+                 |    |    |    |--- directive3
+                 |    |    |         |--- directive3.js
+                 |    |    |
+                 |    |    |--- services
+                 |    |         |
+                 |    |         |--- service1
+                 |    |         |    |--- service1.js
+                 |    |         |    |--- service1.ngdoc
+                 |    |         |
+                 |    |         |--- service2
+                 |    |              |--- service2.js
+                 |    |
+                 |    |--- assets
+                 |          |--- css (vide, les fichiers seront généré par l&#39;interpretation des fichiers less et sass)
+                 |          |--- fonts
+                 |          |--- img
+                 |          |--- js
+                 |          |--- less (material bootstrap less files)
+                 |          |--- lib (librairies installé par bower)
+                 |          |--- scss
+                 |              |
+                 |              |--- _directive2.scss
+                 |              |--- _directive1.scss
+                 |              |--- _directive3.scss
+                 |              |--- itesoft.scss
+                 |
+                 |
+                 |--- .bowererrc (configuration bower)
+                 |--- bower.json (dépendances du projet)
+                 |--- build.config.js (fichier de configuration du build)
+                 |--- gulpfile.js
+                 |--- package.js (dépendances de l&#39;environnement de développement)
+</code></pre><p>En règle générale :</p>
+<p>les nouveaux composants de type directive, sont créés dans le répertoire composite.
+les nouveaux composants de type service, sont créés dans le répertoire service.
+Le css des composants doit être dans un fichier sass portant le nom du composant.</p>
+<h3 id="le-css-less-sass" id="angularjs-api-docs_le-css,-less,-sass">Le CSS, LESS, SASS</h3>
+<p>le CSS de d&#39;angular-common surcharge celui material bootstrap qui lui-même surcharge celui de bootstrap</p>
+<p>l&#39;idée initiale est d&#39;utiliser bootstrap comme base du templating css, surchargeable par des styles itesoft, le parti pris actuel étant le material design , le theme material bootstrap à été utiliser pour surcharger bootstrap.</p>
+<h3 id="cr-ation-d-un-nouveau-composant" id="angularjs-api-docs_création-dun-nouveau-composant">Création d&#39;un nouveau composant</h3>
+<p>La création d&#39;un nouveau composant implique la création d&#39;une nouvelle branche git (portant le nom de votre composant),
+ dans laquelle vous allez commiter pendant la phase de développement.</p>
+<p>une fois le composant validé et testé, merger la branche avec master.</p>
+<h2 id="comment-participer-" id="comment-participer">Comment participer ???!!!</h2>
+<p>La documentation et les exemples du showcase sont automatiquement générés à partir de la ngDoc associée aux composants,
+il est de ce fait important de correctement documenter vos composants afin qu&#39;ils soient
+réutilisables et maintenables. Un composant mal documenté ne sera jamais utilisé.</p>
+<p>La ngDoc permet d&#39;exposer des exemples de votre composant via l&#39;annotation @example. Cette dernière, une fois interprétée par le plugin gulp-ngDoc, sera inclus dans le showcase et un lien permettra de la tester sous plunker.
+Une fois votre composant testé, documenté et commité, il convient de mettre à jour la <a href="http://alizarion.github.io/angular-common/">documentation</a> pour se faire :</p>
+<pre><code>            gulp build  &lt;-- génération de la dist
+            gulp docs   &lt;-- génération du showcase
+            gulp deploy &lt;-- publication du showcase sur github https://github.com/alizarion/angular-common/tree/gh-pages
+</code></pre><h3 id="utilisation-des-branches-sur-github-" id="comment-participer_utilisation-des-branches-sur-github">Utilisation des branches sur github.</h3>
+<pre><code>               __feature branch ______O &lt;--  feature branch
+              /                   \
+             /                     \
+    ________O______develop__________O___________________________ &lt;-- dev branch
+   /                                       \
+  /                                         \
+ /___________________master__________________0__________________ &lt;-- release branch
+                                      release
+</code></pre><ul>
+<li>branch master : réservé uniquement aux releases.</li>
+<li>branch develop : branche de développement.</li>
+<li>branch feature : à chaque nouvelle feature, créer une nouvelle branche à partir de &quot;develop&quot; portant le nom de la feature.</li>
+</ul>
+<h3 id="pour-un-hotfix" id="comment-participer_pour-un-hotfix">Pour un hotfix</h3>
+<ul>
+<li><p>récupérer la branche develop du projet :</p>
+<pre><code>      git clone https://github.com/alizarion/angular-common.git
+</code></pre></li>
+<li><p>créer une branch pour votre hotfix à partir de develop.</p>
+<pre><code>      git checkout -b master-detail-hotfix develop
+
+                             ___ myfeature _ &lt;--  feature branch
+                            /
+                           /
+                  ________O______develop_______
+                 /
+                /
+               /___________________master_______
+</code></pre></li>
+</ul>
+<ul>
+<li><p>corriger, tester et commiter le correctif.</p>
+<pre><code>      git commit -a -m &quot;Correctif du bug blablab ...&quot;
+</code></pre></li>
+<li><p>remerger avec la branch develop :</p>
+<pre><code>          git checkout develop
+          git merge --no-ff master-detail-hotfix
+          git tag -a master-detail-hotfix
+</code></pre></li>
+<li><p>suppression de la branch</p>
+<pre><code>          git branch -d master-detail-hotfix
+</code></pre></li>
+<li><p>push de develop</p>
+<pre><code>         git push origin develop
+</code></pre></li>
+</ul>
+<h3 id="pour-une-nouvelle-feature-" id="comment-participer_pour-une-nouvelle-feature">Pour une nouvelle feature.</h3>
+<ul>
+<li><p>récupérer la branche develop du projet :</p>
+<pre><code>      git clone https://github.com/alizarion/angular-common.git
+</code></pre></li>
+<li><p>créer une nouvelle branch pour votre feature à partir de develop :</p>
+<pre><code>         git checkout -b myfeature develop
+</code></pre></li>
+</ul>
+<pre><code>                          ___ myfeature _ &lt;--  feature branch
+                         /
+                        /
+               ________O______develop_______
+              /
+             /
+            /___________________master_______
+</code></pre><ul>
+<li><p>rédiger la ngDoc contenant l&#39;exemple d&#39;utilisation de la documentation via l&#39;annotation @example, le watch met à jour autatiquement le showcase.</p>
+<pre><code>      gulp watch
+</code></pre></li>
+<li><p>commitez</p>
+<pre><code>      git commit -a -m &quot;Ma super feature&quot;
+
+                        ___ myfeature _o__ &lt;--  commit sur branch feature
+                       /
+                      /
+             ________O______develop_______
+            /
+           /
+          /___________________master_______
+</code></pre></li>
+</ul>
+<ul>
+<li><p>et mergez avec develop</p>
+<pre><code>      git checkout develop
+      git merge --no-ff myfeature
+
+                        ___ myfeature _o______
+                       /                 \
+                      /                   \
+             ________O______develop________o__ &lt;--  merge myfeature avec develop
+            /
+           /
+          /___________________master__________
+</code></pre></li>
+<li><p>suppression de la branch</p>
+<pre><code>      git branch -d myfeature
+
+                        ___ myfeature _o_______o &lt;--  suppression branch myfeature
+                       /                 \
+                      /                   \
+             ________O______develop________o___
+            /
+           /
+          /___________________master___________
+</code></pre></li>
+<li><p>générer la dist</p>
+<pre><code>      gulp build
+</code></pre></li>
+<li><p>push de develop</p>
+<pre><code>         git push origin develop
+</code></pre></li>
+<li><p>générer le showcase à partir de la documentation</p>
+<pre><code>      gulp docs
+</code></pre></li>
+<li><p>il ne reste plus qu&#39;à déployer le showcase généré à partir de votre documentation</p>
+<pre><code>      gulp deploy
+</code></pre></li>
+</ul>
+<h2 id="rappel-des-bonnes-pratiques-angularjs" id="rappel-des-bonnes-pratiques-angularjs">Rappel des bonnes pratiques AngularJS</h2>
+<p><a href="https://github.com/alizarion/angularjs-style-guide/blob/master/README-fr-fr.md">source</a></p>
+<ul>
+<li>Utiliser:<ul>
+<li><code>$timeout</code> au lieu de <code>setTimeout</code></li>
+<li><code>$interval</code> au lieu de <code>setInterval</code></li>
+<li><code>$window</code> au lieu de <code>window</code></li>
+<li><code>$document</code> au lieu de <code>document</code></li>
+<li><code>$http</code> au lieu de <code>$.ajax</code>
+Cela rendra vos tests plus faciles et, dans certains cas, évitera les comportements inattendus</li>
+</ul>
+</li>
+</ul>
+<h2 id="controllers" id="controllers">Controllers</h2>
+<ul>
+<li>The naming of the controller is done using the controller&#39;s</li>
+<li>Les contrôleurs sont nommés en UpperCamelCase [Controller.js].</li>
+<li>The naming of the controller is done using the controller&#39;s functionality (for example shopping cart, homepage, admin panel) and the substring <code>Controller</code> in the end.</li>
+<li>Controllers are plain javascript so they will be named UpperCamelCase (<code>HomePageController</code>, <code>ShoppingCartController</code>, <code>AdminPanelController</code>, etc.).</li>
+</ul>
+<h2 id="directives" id="directives">Directives</h2>
+<ul>
+<li>Name your directives with lowerCamelCase.</li>
+<li>Name your directive files with lowerCamelCase[Directive.js].</li>
+<li>Use <code>scope</code> instead of <code>$scope</code> in your link function. In the compile, post/pre link functions you have already defined arguments which will be passed when the function is invoked, you won&#39;t be able to change them using DI. This style is also used in AngularJS&#39;s source code.</li>
+<li>Use <code>pm</code> prefixe for your directives to prevent name collisions with third-party libraries, and end with <code>Directive.js</code>  ex :  <code>pmDropdownDirective.js</code></li>
+<li>Do not use <code>ng</code>, <code>ui</code> or <code>it</code> prefixes since they are reserved for AngularJS and AngularJS UI and itesoft-angular-common.</li>
+<li>DOM manipulations must be done only through directives.</li>
+<li>Create an isolated scope when you develop reusable components.</li>
+<li>Use directives as attributes or elements instead of comments or classes, this will make your code more readable.</li>
+<li>Use <code>scope.$on(&#39;$destroy&#39;, fn)</code> for cleaning up. This is especially useful when you&#39;re wrapping third-party plugins as directives.</li>
+</ul>
+<h2 id="filters" id="filters">Filters</h2>
+<ul>
+<li>Name your filters with lowerCamelCase.</li>
+<li>Name your filter  files  with lowerCamelCase[Filter.js].</li>
+<li>Make your filters as light as possible. They are called often during the <code>$digest</code> loop so creating a slow filter will slow down your app.</li>
+<li>Do a single thing in your filters, keep them coherent. More complex manipulations can be achieved by piping existing filters.</li>
+</ul>
+<h2 id="services" id="services">Services</h2>
+<ul>
+<li>Name your service files with lowerCamelCase[Service.js].</li>
+<li>Use camelCase to name your services.</li>
+<li><p>UpperCamelCase (PascalCase) for naming your services, used as constructor functions i.e.:</p>
+<pre><code>              function MainCtrl($scope, User) {
+                $scope.user = new User(&#39;foo&#39;, 42);
+              }
+
+              module.controller(&#39;MainCtrl&#39;, MainCtrl);
+
+              function User(name, age) {
+                this.name = name;
+                this.age = age;
+              }
+
+              module.factory(&#39;User&#39;, function () {
+                return User;
+              });
+</code></pre><ul>
+<li>lowerCamelCase for all other services.</li>
+</ul>
+</li>
+<li><p>Encapsulate all the business logic in services. Prefer using it as your <code>model</code>.</p>
+</li>
+</ul>
+</div></div>

@@ -1,0 +1,37 @@
+<h1><code ng:non-bindable="">itDetailHeader</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">itesoft</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="itesoft-directive-page itesoft-directive-itdetailheader-page"><p>A container element for detail header, MUST be include in <a href="#/api/itesoft.directive:itDetail"><code>&lt;it-detail&gt;</code></a> .
+for more information see <a href="#/api/itesoft.directive:itMasterDetail"><code>&lt;it-master-detail&gt;</code></a>.</p>
+<pre><code class="lang-html">&lt;it-master-detail&gt;
+  &lt;!-- Master Content content --&gt;
+
+  &lt;it-master&gt;
+      &lt;it-master-header&gt;
+      &lt;/it-master-header&gt;
+  &lt;/it-master&gt;
+
+  &lt;!-- menu --&gt;
+  &lt;it-detail&gt;
+       &lt;it-detail-header&gt;
+          &lt;button class=&quot;btn btn-primary&quot; title=&quot;Add&quot; ng-disabled=&quot;currentItemWrapper.hasChanged&quot; ng-click=&quot;myAction()&quot;&gt;&lt;span class=&quot;fa fa-plus fa-lg&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+      &lt;/it-detail-header&gt;
+
+      &lt;it-detail-content&gt;
+      &lt;/it-detail-content&gt;
+  &lt;/it-detail&gt;
+
+&lt;/it-master-detail&gt;
+</code></pre>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;it-detail-header&gt;
+&lt;/it-detail-header&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY it-detail-header&gt;
+   ...
+&lt;/ANY&gt;</pre>
+</div>
+</div>

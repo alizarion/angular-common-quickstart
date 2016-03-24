@@ -1,0 +1,80 @@
+<h1><code ng:non-bindable="">itMaster</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">itesoft</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="itesoft-directive-page itesoft-directive-itmaster-page"><p>Most important part of master-detail component, that</p>
+<p>To use master details directive, add an  <a href="#/api/itesoft.directive:itMasterDetail"><code>&lt;it-master-detail&gt;</code></a> parent element. This will encompass all master details content,
+and have 2 child elements: 1  <a href="#/api/itesoft.directive:itMaster"><code>&lt;it-master&gt;</code></a> for the list selectable content,
+and <a href="#/api/itesoft.directive:itDetail"><code>&lt;it-detail&gt;</code></a> that display the content of the selected item.</p>
+<ul>
+<li>for more information see <a href="#/api/itesoft.directive:itMasterDetail"><code>&lt;it-master-detail&gt;</code></a>.<table class="table">
+<tr>
+<td><code>masterDetail.getSelectedItems()</code></td>
+<td>Method to get selected items in the master grid.</td>
+</tr>
+<tr>
+<td><code>masterDetail.getCurrentItemWrapper()</code></td>
+<td>Method to get the selected item wrapper that contain next attributes [originalItem ,currentItem, hasChanged ] .</td>
+</tr>
+<tr>
+<td><code>masterDetail.undoChangeCurrentItem()</code></td>
+<td>Method to revert changes on the selected item.</td>
+</tr>
+<tr>
+<td><code>masterDetail.getFilteredItems()</code></td>
+<td>Method to get displayed item after filter.</td>
+</tr>
+<tr>
+<tr>
+<td><code>masterDetail.fillHeight()</code></td>
+<td>method refresh the master detail Height.</td>
+</tr>
+<tr>
+<td><code>masterDetail.setCurrentItem(entity)</code></td>
+<td>Method to define the selected item, return promise</td>
+</tr>
+<tr>
+<td><code>masterDetail.scrollToItem(item)</code></td>
+<td>Method to scroll to the entity row.</td>
+</tr>
+<tr>
+<td><code>$scope.$broadcast(&#39;unlockCurrentItem&#39;)</code></td>
+<td>unlock the selected item from the editing mode.</td>
+</tr>
+<tr>
+<td><code>$scope.$broadcast(&#39;lockCurrentItem&#39;,unlockOnEquals)</code></td>
+<td>lock the selected item from the editing mode. unlockOnEquals : default true | auto unlock the item if the changed item is equals to the original selected item, if set to false only the $scope.$broadcast(&#39;unlockCurrentItem&#39;) can unlock it.</td>
+</tr>
+<tr>
+<td><code>grid.appScope.itAppScope</code></td>
+<td>access to your application scope from the master-detail context, mainly for template binding</td>
+</tr>
+</table>
+
+</li>
+</ul>
+<pre><code class="lang-html">&lt;it-master-detail&gt;
+  &lt;!-- Master Content content --&gt;
+
+  &lt;it-master&gt;
+      &lt;it-master-header&gt;
+      &lt;/it-master-header&gt;
+  &lt;/it-master&gt;
+
+  &lt;!-- menu --&gt;
+  &lt;it-detail&gt;
+  &lt;/it-detail&gt;
+
+&lt;/it-master-detail&gt;
+</code></pre>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;it-master&gt;
+&lt;/it-master&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY it-master&gt;
+   ...
+&lt;/ANY&gt;</pre>
+</div>
+</div>

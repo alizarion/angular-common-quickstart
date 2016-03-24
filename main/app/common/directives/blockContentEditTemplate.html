@@ -1,0 +1,14 @@
+<span ng-show="!blockContentEditController.fields.readonly && blockContentEditController.fields.block.content && blockContentEditController.fields.block.content!= ''"
+      ng-click="blockContentEditController.fn.deleteBlock()" class="pointer glyphicon glyphicon-remove right padding-lb-5"></span>
+<span ng-click="blockContentEditController.fn.toggle()" ng-show="blockContentEditController.readonly" class="pointer glyphicon glyphicon-remove right padding-lb-5"></span>
+<span ng-show="blockContentEditController.fields.readonly" class="right padding-lb-5 block-content-edit-name">{{blockContentEditController.fields.block.name}}</span>
+<div ui-codemirror="{
+                  lineNumbers: true,
+                  theme:'twilight',
+                  lineWrapping : true,
+                  mode: 'xml',
+                  smartIndent: 'true',
+                  readOnly: blockContentEditController.fields.readonly
+                  viewportMargin: 1000
+                }"  ng-model="blockContentEditController.fields.block.content">
+</div>
