@@ -1,4 +1,4 @@
-<div ng-controller="MainController" class="full-height">
+<div ng-controller="MainController" class="it-fill">
     <it-side-menus>
         <it-side-menu-header it-hide-button-menu="!$root.user">
             <!-- Header Logo -->
@@ -11,8 +11,8 @@
 
             <!-- Header Menu-->
             <div class="collapse navbar-collapse">
-                <div dropdown class="nav navbar-nav navbar-right white">
-                    <button class="btn white loginButton" type="button" dropdown-toggle>
+                <div uib-dropdown class="nav navbar-nav navbar-right white">
+                    <button class="btn white loginButton" type="button" uib-dropdown-toggle>
                         <i class="glyphicon glyphicon-user white">&nbsp;{{$root.user}}&nbsp;</i><span class="caret white"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
@@ -67,16 +67,19 @@
                 <li>
                     <a href="#/playlist"><h5><i class="fa fa-list"></i>&nbsp;{{'GLOBAL.MENU_ITEM_PLAYLIST' | translate}}</h5></a>
                 </li>
+                <li>
+                    <a href="#/playlist"><h5><i class="fa fa-list"></i>&nbsp;{{'GLOBAL.MENU_ITEM_PLAYLIST' | translate}}</h5></a>
+                </li>
             </ul>
         </it-side-menu>
         <it-side-menu-content>
             <!-- WebApp Content -->
 
             <!-- Login view -->
-            <div ng-if="!$root.user" ng-include="'app/features/login/loginView.html'"></div>
+            <div ng-if="!$root.user" class="it-fill" ng-include="'app/features/login/loginView.html'"></div>
 
             <!-- View container -->
-            <div ng-if="$root.user" class="container-fluid">
+            <div ng-if="$root.user" class="container-fluid it-fill">
                 <!-- View title -->
                 <div class="row" ng-show="$root.pageTitle && $root.pageTitle.length > 0">
                     <div class="it-view-header col-md-12">

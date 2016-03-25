@@ -287,7 +287,7 @@ gulp.task('build-trad-fr-only', function () {
         .pipe(rename(function (path) {
             path.basename += "-fr";
         }))
-        .pipe(gulp.dest(buildConfig.srcFolder + 'assets/locale/fr'));
+        .pipe(gulp.dest(buildConfig.srcFolder + '/assets/locale/fr'));
 });
 
 /**
