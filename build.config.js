@@ -38,11 +38,7 @@ module.exports = {
         'main/assets/lib/angular-common/dist/assets/lib/vendor.min.js',
         'main/assets/lib/angular-common/dist/app/itesoft.min.js',
         'main/assets/lib/angular-translate-loader-partial/angular-translate-loader-partial.min.js',
-        'main/assets/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
-        'main/assets/lib/angular-dynamic-locale/dist/tmhDynamicLocale.js',
-        'main/assets/lib/angular-local-storage/dist/angular-local-storage.min.js',
-        'main/assets/lib/angular-strap/dist/angular-strap.min.js',
-        'main/assets/lib/angular-strap/dist/angular-strap.tpl.min.js'
+        'main/assets/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js'
     ],
     /**
      *
