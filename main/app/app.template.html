@@ -1,11 +1,11 @@
-<div ng-controller="MainController" class="full-height row-height-10">
+<div ng-controller="MainController" class="full-height">
     <it-side-menus>
-        <it-side-menu-header>
+        <it-side-menu-header it-hide-button-menu="!$root.user">
             <!-- Header Logo -->
             <div class="navbar-header">
                 <a class="navbar-brand">
                     <span><img src="assets/img/SCPA_Suppliers_50px.png" width="32" height="32"/></span>
-                    T4HTML
+                    Music Manager
                 </a>
             </div>
 
@@ -52,29 +52,31 @@
         </it-side-menu-header>
         <it-side-menu>
             <!-- Side Menu -->
-            <ul it-nav-active="active" class="nav navbar-nav nav-pills nav-stacked list-group row-height-5">
-                <h2>{{'GLOBAL.ITESOFT_FILE' | translate}}</h2>
-                <li it-collapsed-item ng-repeat="(key,blockListFilterByOrigin) in blocks">
-
-                    <h1 ng-if="selectedFile == key" class="btn btn-lg btn-success col-xs-12" ng-click="editFile(key)">{{key}}</h1>
-                    <h1 ng-if="selectedFile != key" class="btn btn-lg btn-primary col-xs-12" ng-click="editFile(key)">{{key}}</h1>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav nav-pills nav-stacked directive-list-group row-height-5">
-                <h2>{{'GLOBAL.ITESOFT_COMPONENT' | translate}}</h2>
+            <ul it-nav-active="active" class="nav navbar-nav nav-pills nav-stacked list-group">
                 <li it-collapsed-item>
-                    <h1 class="btn btn-lg btn-primary col-xs-12" >SelectBox</h1>
-                    <h1 class="btn btn-lg btn-primary col-xs-12" >LazyGrid</h1>
-                    <h1 class="btn btn-lg btn-primary col-xs-12" >Popup</h1>
+                    <a href=""><h5><i class="fa fa-music"></i>&nbsp;{{'GLOBAL.MENU_ITEM_MUSIC' | translate}}</h5></a>
+                    <ul  class="nav navbar-nav nav-pills nav-stacked it-menu-animated">
+                        <li >
+                            <a href="#/music/poprock" translate>GLOBAL.MENU_ITEM_MUSIC_POPROCK</a>
+                        </li>
+                        <li >
+                            <a href="#/music/dance" translate>GLOBAL.MENU_ITEM_MUSIC_DANCE</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#/playlist"><h5><i class="fa fa-list"></i>&nbsp;{{'GLOBAL.MENU_ITEM_PLAYLIST' | translate}}</h5></a>
                 </li>
             </ul>
         </it-side-menu>
         <it-side-menu-content>
             <!-- WebApp Content -->
 
+            <!-- Login view -->
+            <div ng-if="!$root.user" ng-include="'app/features/login/loginView.html'"></div>
+
             <!-- View container -->
-            <div  class="container-fluid row-height-10">
-                <toast class="toaster"></toast>
+            <div ng-if="$root.user" class="container-fluid">
                 <!-- View title -->
                 <div class="row" ng-show="$root.pageTitle && $root.pageTitle.length > 0">
                     <div class="it-view-header col-md-12">
@@ -83,8 +85,7 @@
                     </div>
                 </div>
                 <!-- View content -->
-                <div ng-view class="ng-view-class row-height-10"></div>
-
+                <div ng-view class="ng-view-class"></div>
             </div>
         </it-side-menu-content>
     </it-side-menus>

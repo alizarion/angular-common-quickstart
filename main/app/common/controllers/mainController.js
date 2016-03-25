@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('T4HTML')
+angular.module('MusicManager')
     .controller('MainController', [
         '$rootScope',
         '$scope',
         '$translate',
         '$route',
+        'AuthService',
         'localStorageService',
-        'BlockService',
-        function ($rootScope, $scope, $translate, $route, localStorageService, BlockService) {
+        function ($rootScope, $scope, $translate, $route, AuthService, localStorageService) {
 
             //Langues supportées
             var localeBrowser = {};
@@ -17,6 +17,8 @@ angular.module('T4HTML')
             localeBrowser['en'] = 'en_US';
             localeBrowser['de'] = 'de_DE';
 
+
+            $scope.authService = AuthService;
 
             $scope.changeLanguage = function (language) {
 
@@ -33,26 +35,5 @@ angular.module('T4HTML')
             };
 
             $scope.changeLanguage(localeBrowser[$translate.preferredLanguage()]);
-
-           $scope.fileContent = "";
-           $scope.selectedFile = "";
-           $scope.blocks;
-           BlockService.original.query(
-           function(data){
-               $scope.blocks = data.reduce((function(map, obj) {
-                 if (map[obj.origin] === void 0) {
-                   map[obj.origin] = [];
-                 }
-                 map[obj.origin].push(obj);
-                 return map;
-               }), {});
-           },function (failed){
-                console.log("failed");
-           })
-
-           $scope.editFile = function(selectedFile){
-                $scope.selectedFile = selectedFile;
-                $rootScope.$emit('edit_file',selectedFile);
-           }
 
         }]);

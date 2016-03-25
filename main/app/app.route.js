@@ -1,19 +1,39 @@
 'use strict';
 
-angular.module('T4HTML').config(['$routeProvider',
+angular.module('MusicManager').config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider
-            .when('/file/edit', {
-                templateUrl: 'app/features/fileEditor/fileEditorView.html',
-                controller: 'FileEditorController',
-                title: '',
+            .when('/music/poprock', {
+                templateUrl: 'app/features/music/poprock/poprockView.html',
+                controller: 'PoprockController',
+                title: 'MUSIC.POPROCK.TITLE',
                 resolve: {
                     translationPart: [ 'TranslationService',function(TranslationService){
-                       return TranslationService('fileEditor');
+                       return TranslationService('poprock');
+                    }]
+                }
+            })
+            .when('/music/dance', {
+                templateUrl: 'app/features/music/dance/danceView.html',
+                controller: 'DanceController',
+                title: 'MUSIC.DANCE.TITLE',
+                resolve: {
+                    translationPart: [ 'TranslationService',function(TranslationService){
+                        return TranslationService('dance');
+                    }]
+                }
+            })
+            .when('/playlist', {
+                templateUrl: 'app/features/playlist/playlistView.html',
+                controller: 'PlaylistController',
+                title: 'PLAYLIST.TITLE',
+                resolve: {
+                    translationPart : [ 'TranslationService',function(TranslationService){
+                        return TranslationService('playlist');
                     }]
                 }
             })
             .otherwise({
-                redirectTo: '/file/edit'
+                redirectTo: '/music/poprock'
             });
     }]);

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('T4HTML', [
+angular.module('MusicManager', [
     'itesoft',
     'ngRoute',
     'ngSanitize',
@@ -8,26 +8,8 @@ angular.module('T4HTML', [
     'tmh.dynamicLocale',
     'mgcrea.ngStrap.datepicker',
     'LocalStorageModule',
-    'ui.codemirror',
-    'ui.bootstrap.dropdown',
-    'ngResource'
+    'ui.bootstrap.dropdown'
     ])
-    .config(['itNotifierProvider', function (itNotifierProvider) {
-        //configuration of default values
-        itNotifierProvider.defaultOptions = {
-            dismissOnTimeout: true,
-            timeout: 4000,
-            dismissButton: true,
-            animation: 'fade',
-            horizontalPosition: 'right',
-            verticalPosition: 'bottom',
-            compileContent: true,
-            dismissOnClick: false,
-            success:{dismissOnClick: true},//optional overload behavior toast success
-            info:{dismissOnClick: true},//optional overload behavior toast info
-            error:{dismissOnTimeout: false},//optional overload behavior toast error
-            warning:{dismissOnTimeout: false}//optional overload behavior toast warning
-        }}])
     .config(['$translateProvider', '$translatePartialLoaderProvider', 'tmhDynamicLocaleProvider', function ($translateProvider, $translatePartialLoaderProvider, tmhDynamicLocaleProvider) {
         // Declare languages mapping
         $translateProvider.registerAvailableLanguageKeys(['en', 'fr', 'de'], {
@@ -65,5 +47,5 @@ angular.module('T4HTML', [
                 tmhDynamicLocale.set($translate.preferredLanguage());
             }
         });
-    }])
+    }]);
 

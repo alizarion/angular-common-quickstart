@@ -1,0 +1,12 @@
+﻿{
+    "PLAYLIST" : {
+        "TITLE" : "Listes de lecture",
+        "NAME_LABEL" : "Nom",
+        "DESCRIPTION_LABEL" : "Description",
+        "SHARED_LABEL" : "Partagée",
+        "MODIFICATION_POPUP" : {
+            "TITLE" : "Modification en cours",
+            "MESSAGE" : "Vous n'avez pas sauvegardé vos modifications !"
+        }
+    }
+}
