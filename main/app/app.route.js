@@ -33,6 +33,18 @@ angular.module('MusicManager').config(['$routeProvider',
                     }]
                 }
             })
+            .when('/reader', {
+                templateUrl: 'app/features/reader/readerView.html',
+                controller: function(){
+
+                },
+                title: 'MUSIC.READER.TITLE',
+                resolve: {
+                    translationPart : [ 'TranslationService',function(TranslationService){
+                        return TranslationService('reader');
+                    }]
+                }
+            })
             .otherwise({
                 redirectTo: '/music/poprock'
             });

@@ -21,6 +21,7 @@ module.exports = {
     
     distFolder:'dist',
     srcFolder:'main',
+    testFolder: 'test',
 
     /**
      * Liste des fichiers JS de l'application qui seront minifier pour la prod.
@@ -31,6 +32,30 @@ module.exports = {
         'main/app/**/*.js'
     ],
 
+    excludeFromAppDist: {
+
+        unitTest: [
+            'test/unit/**/*Test.js'
+        ],
+        e2e: [
+            'test/e2e/**/configurationTest.js'
+        ],
+        unminifiedDistFiles: [
+            'main/**/pdf.js',
+            'main/**/pdf.worker.js',
+            'main/**/tiff.min.js'
+        ]
+    },
+
+    excludedFilePattern: function () {
+        var result = [];
+        for (var key  in this.excludeFromAppDist) {
+            for (var i = 0; i < this.excludeFromAppDist[key].length; i++) {
+                result.push('!' + this.excludeFromAppDist[key][i]);
+            }
+        }
+        return result;
+    },
     /**
      * Liste des librairies minifié à utiliser en prod
      */
@@ -39,6 +64,17 @@ module.exports = {
         'main/assets/lib/angular-common/dist/app/itesoft.min.js',
         'main/assets/lib/angular-translate-loader-partial/angular-translate-loader-partial.min.js',
         'main/assets/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js'
+    ],
+    assetsDistFiles: [
+        '!main/assets/lib/**/*.js',
+        '!main/assets/lib/**/*.html',
+        '!main/assets/lib/**/*.md',
+        '!main/assets/lib/**/*.txt',
+        '!main/assets/lib/**/*.json',
+        '!main/assets/css/**/*',
+        '!main/assets/scss/**/*.scss',
+        '!main/assets/scss/**/*.less',
+        'main/assets/**/*'
     ],
     /**
      *

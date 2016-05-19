@@ -3,8 +3,7 @@
  */
 var pkg = require('./package.json');
 var gulp = require('gulp');
-var gutil = require('gulp-util');
-var bower = require('bower');
+var bower = require('gulp-bower');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
@@ -19,12 +18,12 @@ var flatten = require('gulp-flatten');
 var buildConfig = require('./build.config.js');
 var sh = require('shelljs');
 var dedupe = require('gulp-dedupe');
-var serve = require('gulp-serve');
 var karma = require('gulp-karma');
 var protractor = require('gulp-protractor').protractor;
 var webdriver_standalone = require('gulp-protractor').webdriver_standalone;
 var webdriver_update = require('gulp-protractor').webdriver_update;
 var chmod = require('gulp-chmod');
+//var removeHtmlComments = require('gulp-remove-html-comments');
 
 /**
  * Execute les actions de build dans l'ordre
@@ -34,18 +33,23 @@ gulp.task('build', function (callback) {
         'sass',
         'vendor-js',
         'app-js',
-        'app-constants',
+        'unminified-files',
         'html',
         'fonts',
         'vendor-css',
         'json-assets',
-        'data-js',
+        'assets-js',
         'app-css',
         'images',
         'locales',
         'angular-locales',
         'favicon',
         callback);
+});
+
+
+gulp.task('gulp-init', function() {
+    return bower("install");
 });
 
 /**
@@ -68,6 +72,7 @@ gulp.task('sass', function (done) {
         .pipe(sass({
             errLogToConsole: true
         }))
+        .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.srcFolder + '/assets/css'))
         .on('end', done);
 });
@@ -84,6 +89,7 @@ gulp.task('vendor-css', function (done) {
         .pipe(rename({
             extname: '.min.css'
         }))
+        .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.distFolder + '/assets/fonts'))
         .on('end', done);
 });
@@ -100,6 +106,7 @@ gulp.task('app-css', function (done) {
         .pipe(rename({
             extname: '.min.css'
         }))
+        .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.distFolder + '/assets/css'))
         .on('end', done);
 });
@@ -108,7 +115,8 @@ gulp.task('app-css', function (done) {
  * Concat, minifie et uglut le Javascript applicatif
  */
 gulp.task('app-js', function () {
-    return gulp.src(buildConfig.appFiles)
+
+    return gulp.src(buildConfig.appFiles.concat(buildConfig.excludedFilePattern()))
         .pipe(concat('app.min.js'))
         .pipe(header(buildConfig.closureStart))
         .pipe(footer(buildConfig.closureEnd))
@@ -116,14 +124,16 @@ gulp.task('app-js', function () {
         .pipe(header(buildConfig.banner, {
             pkg: pkg
         }))
+        .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.distFolder + '/app'));
 });
 
 /**
  * Concat, minifie et uglut le Javascript applicatif
  */
-gulp.task('app-constants', function () {
-    return gulp.src(buildConfig.srcFolder +'/**/app.constant.js')
+gulp.task('unminified-files', function () {
+    return gulp.src(buildConfig.excludeFromAppDist.unminifiedDistFiles)
+        .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.distFolder));
 });
 
@@ -133,6 +143,7 @@ gulp.task('app-constants', function () {
 gulp.task('vendor-js', function () {
     return gulp.src(buildConfig.vendorJavascriptFiles)
         .pipe(concat('vendor.min.js'))
+        .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.distFolder + '/assets/lib'));
 });
 
@@ -140,25 +151,9 @@ gulp.task('vendor-js', function () {
 /**
  * Concat et Minifie les datas.
  */
-gulp.task('data-js', function () {
-    return gulp.src(buildConfig.appFiles+'/assets/js/')
-        .pipe(chmod({
-			owner: {
-				read: true,
-				write: true,
-				execute: true
-			},
-			group: {
-				read: true,
-				write: true,
-				execute: true
-			},
-			others: {
-				read: true,
-				write: true,
-				execute: true
-			}
-		}))
+gulp.task('assets-js', function () {
+    return gulp.src(buildConfig.srcFolder+'/assets/js/')
+        .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.distFolder+'/assets/js/'));
 });
 
@@ -170,6 +165,8 @@ gulp.task('data-js', function () {
 gulp.task('html', function () {
     gulp.src(buildConfig.srcFolder + '/app/**/*.html')
         // And put it in the dist folder
+        //.pipe(removeHtmlComments())
+        .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.distFolder + '/app'));
 });
 
@@ -182,6 +179,7 @@ gulp.task('fonts', function () {
         .pipe(dedupe({
             same: false
         }))
+        .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.distFolder + '/assets/fonts'));
 });
 
@@ -190,7 +188,8 @@ gulp.task('fonts', function () {
  */
 gulp.task('images', function () {
     gulp.src(buildConfig.srcFolder + '/assets/img/**/*')
-        .pipe(gulp.dest(buildConfig.distFolder + '/assets/img'));
+        .pipe(chmod(755))
+        .pipe(gulp.dest(buildConfig.distFolder + '/assets/img/'));
 });
 
 /**
@@ -206,7 +205,8 @@ gulp.task('favicon', function () {
  */
 gulp.task('locales', function () {
     gulp.src(buildConfig.srcFolder + '/assets/locale/**/*.json')
-        .pipe(gulp.dest(buildConfig.distFolder + '/assets/locale'));
+        .pipe(chmod(755))
+        .pipe(gulp.dest(buildConfig.distFolder + '/assets/locale/'));
 });
 
 /**
@@ -216,6 +216,7 @@ gulp.task('locales', function () {
  */
 gulp.task('angular-locales', function () {
     gulp.src(buildConfig.localeJsFiles)
+        .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.distFolder +'/assets/lib/angular-i18n'));
 });
 
@@ -226,15 +227,21 @@ gulp.task('serve', function () {
         'serve-dist');
 });
 
-gulp.task('serve-src', serve({
-    root: ['src'],
-    port: 3000
-}));
+gulp.task('serve-src', function(){
+    gulp.src(buildConfig.srcFolder)
+        .pipe(webserver({
+            port: 3000
+        }));
+});
 
-gulp.task('serve-dist', serve({
-    root: ['dist'],
-    port: 3001
-}));
+gulp.task('serve-dist', function(){
+    gulp.src(buildConfig.distFolder)
+        .pipe(webserver({
+            port: 3001
+        }));
+});
+
+
 
 /**
  * Obsérve les modification des scss et compile en css
@@ -271,12 +278,11 @@ gulp.task('clean-trad-en', function () {
  * Method to copy json file from assets
  */
 gulp.task('json-assets',function(){
-   return gulp.src(buildConfig.srcFolder + '/assets/json/**/*.json')
-       .pipe(gulp.dest(buildConfig.distFolder + '/assets/json'))
+    return gulp.src(buildConfig.srcFolder + '/assets/json/**/*.json')
+        .pipe(gulp.dest(buildConfig.distFolder + '/assets/json'))
 });
 
 /**
- *
  * Génération des traductions fr (sans nettoyage)
  *
  */
@@ -298,7 +304,7 @@ gulp.task('build-trad-fr-only', function () {
 gulp.task('build-trad-en-only', function () {
     return gulp.src(['!'+buildConfig.srcFolder +
         '/assets/locale/{**-fr,**-en.json,**-de.json,fr.json,en.json,de.json}.json',
-        buildConfig.srcFolder + '/assets/locale/**.json'])
+            buildConfig.srcFolder + '/assets/locale/**.json'])
         .pipe(rename(function (path) {
             path.basename += "-en";
         }))
@@ -332,9 +338,9 @@ gulp.task('test', function () {
     var allVendorFiles = buildConfig.vendorJavascriptFiles.slice();
     allVendorFiles.push(buildConfig.srcFolder + '/assets/lib/angular-mocks/angular-mocks.js');
     var allAppFiles = buildConfig.appFiles.slice();
-    allAppFiles = _removeValueFromArray(allAppFiles, buildConfig.appConstant);
+    allAppFiles.concat(buildConfig.excludeFromAppDist.unitTest);
+    allAppFiles.concat(buildConfig.unminifiedDistFiles);
     var testFiles = allVendorFiles.concat(allAppFiles);
-    testFiles.push('test/unit/**/*.js');
 
     return gulp.src(testFiles)
         .pipe(karma({
@@ -396,8 +402,7 @@ gulp.task('e2e', ['webdriver_update'], function (callback) {
         .pipe(webserver({
             port: 4000
         }));
-    var fileStream = gulp.src('test/e2e/**/*.js');
-
+    var fileStream = gulp.src(buildConfig.excludeFromAppDist.e2e);
     fileStream.pipe(protractor({
         configFile: "protractor.conf.js",
         args: ['--baseUrl', 'http://127.0.0.1:4000']
