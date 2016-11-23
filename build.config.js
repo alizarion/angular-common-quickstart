@@ -3,25 +3,26 @@
  */
 var pkg = require('./package.json');
 
+
 module.exports = {
     dist: 'dist',
     /**
      * Header de la distribution.
      */
-    banner:
-    '/*!\n' +
+    banner: '/*!\n' +
     ' * Copyright 2015 itesoft.\n' +
     ' * http://itesoft.com/\n' +
     ' *\n' +
     ' * <%= pkg.name %>, v<%= pkg.version %>\n' +
-    ' * A powerful music manager.*/\n' ,
+    ' * A powerful music manager.*/\n',
 
     closureStart: '(function() {var RELEASE_VERSION="1.0.0";\n',
     closureEnd: '\n})();',
-    
-    distFolder:'dist',
-    srcFolder:'main',
+
+    distFolder: 'dist',
+    srcFolder: 'main',
     testFolder: 'test',
+    reportFolder: 'report',
 
     /**
      * Liste des fichiers JS de l'application qui seront minifier pour la prod.
@@ -32,13 +33,19 @@ module.exports = {
         'main/app/**/*.js'
     ],
 
+
     excludeFromAppDist: {
 
         unitTest: [
             'test/unit/**/*Test.js'
         ],
         e2e: [
-            'test/e2e/**/configurationTest.js'
+            'test/e2e/**/*.feature'
+        ],
+        e2eReportSite: 'report/site',
+        e2eJsonReportOutputFile: ['report/report.json'],
+        e2eSupport: [
+            'test/e2e/support/*.js'
         ],
         unminifiedDistFiles: [
             'main/**/pdf.js',
@@ -89,6 +96,6 @@ module.exports = {
     ],
     vendorCssFiles: [
         'main/assets/lib/font-awesome/css/font-awesome.min.css',
-        'main/assets/lib/angular-common/dist/assets/fonts/itesoft-bundle.min.css'
+        'main/assets/lib/angular-common/dist/assets/fonts/itesoft-default-bundle.min.css'
     ]
 };

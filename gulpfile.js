@@ -13,7 +13,8 @@ var uglify = require('gulp-uglify');
 var header = require('gulp-header');
 var footer = require('gulp-footer');
 var clean = require('gulp-clean');
-var webserver = require('gulp-webserver');
+var connect = require('gulp-connect');
+var cors = require('cors');
 var flatten = require('gulp-flatten');
 var buildConfig = require('./build.config.js');
 var sh = require('shelljs');
@@ -24,6 +25,7 @@ var webdriver_standalone = require('gulp-protractor').webdriver_standalone;
 var webdriver_update = require('gulp-protractor').webdriver_update;
 var chmod = require('gulp-chmod');
 //var removeHtmlComments = require('gulp-remove-html-comments');
+var reporter = require('gulp-protractor-cucumber-html-report');
 
 /**
  * Execute les actions de build dans l'ordre
@@ -48,7 +50,7 @@ gulp.task('build', function (callback) {
 });
 
 
-gulp.task('gulp-init', function() {
+gulp.task('gulp-init', function () {
     return bower("install");
 });
 
@@ -152,9 +154,9 @@ gulp.task('vendor-js', function () {
  * Concat et Minifie les datas.
  */
 gulp.task('assets-js', function () {
-    return gulp.src(buildConfig.srcFolder+'/assets/js/')
+    return gulp.src(buildConfig.srcFolder + '/assets/js/')
         .pipe(chmod(755))
-        .pipe(gulp.dest(buildConfig.distFolder+'/assets/js/'));
+        .pipe(gulp.dest(buildConfig.distFolder + '/assets/js/'));
 });
 
 
@@ -164,8 +166,8 @@ gulp.task('assets-js', function () {
  */
 gulp.task('html', function () {
     gulp.src(buildConfig.srcFolder + '/app/**/*.html')
-        // And put it in the dist folder
-        //.pipe(removeHtmlComments())
+    // And put it in the dist folder
+    //.pipe(removeHtmlComments())
         .pipe(chmod(755))
         .pipe(gulp.dest(buildConfig.distFolder + '/app'));
 });
@@ -196,7 +198,7 @@ gulp.task('images', function () {
  * Copie du favicon
  */
 gulp.task('favicon', function () {
-    gulp.src(buildConfig.srcFolder +'/favicon.ico')
+    gulp.src(buildConfig.srcFolder + '/favicon.ico')
         .pipe(gulp.dest(buildConfig.distFolder));
 });
 
@@ -217,9 +219,8 @@ gulp.task('locales', function () {
 gulp.task('angular-locales', function () {
     gulp.src(buildConfig.localeJsFiles)
         .pipe(chmod(755))
-        .pipe(gulp.dest(buildConfig.distFolder +'/assets/lib/angular-i18n'));
+        .pipe(gulp.dest(buildConfig.distFolder + '/assets/lib/angular-i18n'));
 });
-
 
 
 gulp.task('serve', function () {
@@ -227,20 +228,29 @@ gulp.task('serve', function () {
         'serve-dist');
 });
 
-gulp.task('serve-src', function(){
-    gulp.src(buildConfig.srcFolder)
-        .pipe(webserver({
-            port: 3000
-        }));
+gulp.task('serve-src', function () {
+    connect.server({
+
+        root: buildConfig.srcFolder,
+        middleware: function () {
+            return [cors()];
+        },
+        port: 3000,
+        livereload: true
+    });
 });
 
-gulp.task('serve-dist', function(){
-    gulp.src(buildConfig.distFolder)
-        .pipe(webserver({
-            port: 3001
-        }));
-});
+gulp.task('serve-dist', function () {
+    connect.server({
 
+        root: buildConfig.distFolder,
+        middleware: function () {
+            return [cors()];
+        },
+        port: 3001,
+        livereload: true
+    });
+});
 
 
 /**
@@ -277,7 +287,7 @@ gulp.task('clean-trad-en', function () {
 /**
  * Method to copy json file from assets
  */
-gulp.task('json-assets',function(){
+gulp.task('json-assets', function () {
     return gulp.src(buildConfig.srcFolder + '/assets/json/**/*.json')
         .pipe(gulp.dest(buildConfig.distFolder + '/assets/json'))
 });
@@ -287,9 +297,9 @@ gulp.task('json-assets',function(){
  *
  */
 gulp.task('build-trad-fr-only', function () {
-    return gulp.src(['!'+buildConfig.srcFolder +
-        '/assets/locale/{**-fr,**-en.json,**-de.json,fr.json,en.json,de.json}.json',
-            buildConfig.srcFolder + '/assets/locale/**.json'])
+    return gulp.src(['!' + buildConfig.srcFolder +
+    '/assets/locale/{**-fr,**-en.json,**-de.json,fr.json,en.json,de.json}.json',
+        buildConfig.srcFolder + '/assets/locale/**.json'])
         .pipe(rename(function (path) {
             path.basename += "-fr";
         }))
@@ -302,9 +312,9 @@ gulp.task('build-trad-fr-only', function () {
  *
  */
 gulp.task('build-trad-en-only', function () {
-    return gulp.src(['!'+buildConfig.srcFolder +
-        '/assets/locale/{**-fr,**-en.json,**-de.json,fr.json,en.json,de.json}.json',
-            buildConfig.srcFolder + '/assets/locale/**.json'])
+    return gulp.src(['!' + buildConfig.srcFolder +
+    '/assets/locale/{**-fr,**-en.json,**-de.json,fr.json,en.json,de.json}.json',
+        buildConfig.srcFolder + '/assets/locale/**.json'])
         .pipe(rename(function (path) {
             path.basename += "-en";
         }))
@@ -387,29 +397,74 @@ gulp.task('webdriver_update', webdriver_update);
 
 gulp.task('webdriver_standalone', webdriver_standalone);
 
-gulp.task('serverhttp',function(){
-    var stream = gulp.src('main')
-        .pipe(webserver({
-            port: 4000
-        }));
+gulp.task('serverhttp', function () {
+
+    connect.server({
+
+        root: buildConfig.srcFolder,
+        middleware: function () {
+            return [cors()];
+        },
+        port: 4000,
+        livereload: true
+    });
 });
+
+gulp.task('e2e', function () {
+    runSequence('clean-e2e-report',
+        'e2e-test',
+        'e2e-report');
+});
+
 
 /**
  * Execute l'action de test e2e
  */
-gulp.task('e2e', ['webdriver_update'], function (callback) {
-    var stream = gulp.src(buildConfig.distFolder)
-        .pipe(webserver({
-            port: 4000
-        }));
+gulp.task('e2e-test', ['webdriver_update'], function (done) {
+
+    var server = connect.server({
+
+        root: buildConfig.distFolder,
+        middleware: function () {
+            return [cors()];
+        },
+        port: 4000,
+        livereload: true
+    });
     var fileStream = gulp.src(buildConfig.excludeFromAppDist.e2e);
     fileStream.pipe(protractor({
         configFile: "protractor.conf.js",
         args: ['--baseUrl', 'http://127.0.0.1:4000']
-    })).on('error', function (e) {
-        stream.emit('kill');
-        throw (e);
-    }).on('end', function () {
-        stream.emit('kill');
+    })).on('end', function () {
+        console.log('E2E Testing complete');
+        done();
+    }).on('error', function (error) {
+        console.log('E2E Tests failed : ' + error);
+        done();
     });
 });
+
+/**
+ *
+ * Supression des rapport
+ *
+ */
+gulp.task('clean-e2e-report', function () {
+    return gulp.src([buildConfig.reportFolder + '/*'], {
+        force: true
+    }).pipe(clean());
+});
+
+
+gulp.task('e2e-report', function (done) {
+    gulp.src(buildConfig.excludeFromAppDist.e2eJsonReportOutputFile)
+        .pipe(reporter({
+            dest: buildConfig.excludeFromAppDist.e2eReportSite
+        }));
+    done();
+
+    setTimeout(function () {
+        process.exit(0);
+    }, 3000);
+});
+
