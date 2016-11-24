@@ -44,9 +44,6 @@ module.exports = {
         ],
         e2eReportSite: 'report/site',
         e2eJsonReportOutputFile: ['report/report.json'],
-        e2eSupport: [
-            'test/e2e/support/*.js'
-        ],
         unminifiedDistFiles: [
             'main/**/pdf.js',
             'main/**/pdf.worker.js',

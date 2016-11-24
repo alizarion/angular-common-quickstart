@@ -17,6 +17,7 @@ exports.config = {
     cucumberOpts: {
         // require step definitions
         require: ['test/e2e/steps/**/*.js', 'test/e2e/common-test/**/*.js',],
-        format: 'json'
+        format: 'json',
+        tags: '@login'
     }
 };

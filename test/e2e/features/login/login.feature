@@ -13,5 +13,5 @@ Feature: Login
   Scenario: Log into Music Manager with success
     When I enter username as "admin"
     And I enter password as "admin"
-    And I click on login button
+    And I validate my credentials
     Then Login should success

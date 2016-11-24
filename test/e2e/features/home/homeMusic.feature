@@ -11,12 +11,12 @@ Feature: Home page
 
 
   Scenario: All music are displayed in home page
-    When Test
-    Then all music are displayed :
-      | name             | surname
-      | Carly Rae Jepsen | I Really Like You
-      | Kygo             | Firestone ft. Conrad Sewel
-      | The Weeknd       | Can't Feel My Face
-      | One Direction    | Drag Me Down
-      | Demi Lovato      | Cool for the Summer
-      | Taylor Swift     | Wildest Dreams
+    When Empty when
+    Then all musics are displayed :
+      | artist           | title                      |
+      | Carly Rae Jepsen | I Really Like You          |
+      | Kygo             | Firestone ft. Conrad Sewel |
+      | The Weeknd       | Can't Feel My Face         |
+      | One Direction    | Drag Me Down               |
+      | Demi Lovato      | Cool for the Summer        |
+      | Taylor Swift     | Wildest Dreams             |
